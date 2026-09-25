@@ -1,0 +1,127 @@
+XBRL FINANCIAL INSTRUMENTS — ACTUS USE CASES
+=============================================
+Collection: XBRL Real World Examples — TrueTerms Knowledge Base
+
+═══════════════════════════════════════════════════════════════
+SECTION 1 — INDIAN BANK LOAN (IFRS XBRL → PAM CONTRACT)
+═══════════════════════════════════════════════════════════════
+
+Use case: SBI (State Bank of India) files an IFRS XBRL report with RBI.
+An analyst uploads the XBRL file to TrueTerms XBRL Import page.
+The system extracts a PAM contract and runs cash flow projections.
+
+XBRL Source Data (IFRS):
+  ifrs-full:LoansAndAdvancesToCustomers = 5,00,00,000 (INR 5 crore = 50 lakhs)
+  ifrs-full:NominalInterestRate = 0.0875 (8.75% per annum)
+  ifrs-full:MaturityDate = 2029-03-31
+  ifrs-full:DateOfOriginationOfFinancialInstrument = 2024-04-01
+  Currency unit: ISO4217:INR
+
+Extracted ACTUS Contract:
+  contractType: PAM
+  notionalPrincipal: 5000000
+  nominalInterestRate: 0.0875
+  maturityDate: 2029-03-31T00:00:00
+  initialExchangeDate: 2024-04-01T00:00:00
+  currency: INR
+  dayCountConvention: 30E360
+
+ACTUS Cash Flow Events Generated:
+  IP events (Interest Payment): Every year on 2025-03-31, 2026-03-31, 2027-03-31, 2028-03-31
+  MD event (Maturity): On 2029-03-31, payoff = 5000000 + final interest
+  Annual interest amount: 5000000 x 0.0875 = 437500 INR per year
+
+═══════════════════════════════════════════════════════════════
+SECTION 2 — US CORPORATE BOND (US-GAAP XBRL → PAM CONTRACT)
+═══════════════════════════════════════════════════════════════
+
+Use case: A US corporation files 10-K with SEC using US-GAAP XBRL.
+TrueTerms extracts bond details and runs interest payment schedule.
+
+XBRL Source Data (US-GAAP):
+  us-gaap:DebtInstrumentFaceAmount = 1000000 (USD 1 million)
+  us-gaap:DebtInstrumentInterestRateStatedPercentage = 5.5 (5.5%)
+  us-gaap:DebtInstrumentMaturityDate = 2029-06-30
+  us-gaap:DebtInstrumentIssuanceDate = 2024-07-01
+  Currency: USD
+
+Extracted ACTUS Contract:
+  contractType: PAM
+  notionalPrincipal: 1000000
+  nominalInterestRate: 0.055
+  maturityDate: 2029-06-30T00:00:00
+  initialExchangeDate: 2024-07-01T00:00:00
+  currency: USD
+
+Note: US-GAAP stores interest rate as 5.5 (percentage). TrueTerms
+automatically divides by 100 when value is greater than 1.
+
+═══════════════════════════════════════════════════════════════
+SECTION 3 — NBFC HOME LOAN (GENERIC XML → ANN CONTRACT)
+═══════════════════════════════════════════════════════════════
+
+Use case: An Indian NBFC (Housing Finance Company) uses custom XML schema.
+TrueTerms generic parser detects ANN (annuity/EMI) structure.
+
+XBRL Source Data (Generic RBI):
+  rbi:LoanOutstanding = 30,00,000 (INR 30 lakhs)
+  bank:InterestRateAnnual = 9.25
+  custom:LoanEndDate = 2034-03-31
+  custom:LoanStartDate = 2024-04-01
+  custom:LoanType = HomeLoan_EMI (signals ANN contract type)
+
+Extracted ACTUS Contract:
+  contractType: ANN
+  notionalPrincipal: 3000000
+  nominalInterestRate: 0.0925
+  maturityDate: 2034-03-31T00:00:00
+  initialExchangeDate: 2024-04-01T00:00:00
+  currency: INR
+
+ANN Cash Flows: Equal monthly EMI payments for 10 years.
+  Monthly EMI calculation: standard annuity formula
+  Each payment contains both interest and principal components.
+  Interest portion decreases over time as principal reduces.
+
+═══════════════════════════════════════════════════════════════
+SECTION 4 — COMMON QUESTIONS ABOUT XBRL IN TRUETERMS
+═══════════════════════════════════════════════════════════════
+
+Q: What XBRL tag maps to notionalPrincipal in ACTUS?
+A: In IFRS XBRL, the primary tag is ifrs-full:LoansAndAdvancesToCustomers or
+   ifrs-full:NotionalAmount. In US-GAAP, it is us-gaap:DebtInstrumentFaceAmount.
+   In RBI custom schema, it is in-bfsi:SanctionedLoanAmount.
+
+Q: What XBRL tag maps to nominalInterestRate in ACTUS?
+A: In IFRS XBRL, the tag is ifrs-full:NominalInterestRate stored as a decimal.
+   In US-GAAP, it is us-gaap:DebtInstrumentInterestRateStatedPercentage stored as a percentage.
+   TrueTerms automatically converts percentages to decimals.
+
+Q: What XBRL tag maps to maturityDate in ACTUS?
+A: In IFRS XBRL, the tag is ifrs-full:MaturityDate.
+   In US-GAAP, it is us-gaap:DebtInstrumentMaturityDate.
+   ACTUS requires ISO 8601 datetime format (2029-12-31T00:00:00).
+
+Q: How does TrueTerms detect PAM vs ANN from XBRL?
+A: If the XBRL file contains installment or EMI tags, ANN is detected.
+   If only principal and maturity date are present (bullet repayment), PAM is detected.
+   Default is PAM when contract type cannot be determined.
+
+Q: What is the confidence score in XBRL parsing?
+A: Confidence score shows how many required ACTUS fields were successfully extracted.
+   100 percent means all required fields found. 60 percent or above means ready to run.
+   Below 60 percent means the contract needs manual review before running.
+
+Q: Can TrueTerms handle real bank XBRL filings from RBI?
+A: Yes. TrueTerms supports IFRS XBRL (used by Indian banks under Ind AS),
+   US-GAAP XBRL (used by US companies for SEC filings), and generic XML formats
+   used by NBFCs and other financial institutions.
+
+Q: What file formats does the XBRL Import page accept?
+A: The XBRL Import page accepts .xml, .xbrl, and .xsd file extensions.
+   IFRS, US-GAAP, RBI, and Generic XML are all supported.
+
+Q: How does XBRL integration benefit ACTUS financial modeling?
+A: XBRL integration allows TrueTerms to ingest real bank data automatically
+   instead of requiring manual contract entry. A bank analyst can upload their
+   RBI filing and get instant ACTUS cash flow projections without typing anything.

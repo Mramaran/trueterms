@@ -1,0 +1,217 @@
+================================================================================
+ACTUS - ABOUT PAGE
+Official Content from https://www.actusfrf.org/about
+================================================================================
+
+BACKGROUND
+--------------------------------------------------------------------------------
+
+Recent financial crises laid bare serious shortcomings in risk management and 
+financial regulation. In retrospect, the lack of timely granular data reported 
+in a data standard capable of supporting financial analysis contributed much to 
+the crises. The ACTUS project aims to remedy this weakness by creating a global 
+standard for the consistent representation of financial instruments.
+
+The centrality of expected cash flows for financial analysis is obvious and 
+undisputed. Less obvious is the role of the financial contracts. Financial 
+contracts are mutual agreements between counterparties to exchange cash flows. 
+The agreements are written by lawyers in different languages, legal terminology, 
+and jurisdictions. This leaves us with a plethora of terms and different 
+contracts.
+
+However, if one abstracts from the legal terms and focuses on the cash flow 
+obligations, the diversity of financial contracts or agreements shrinks 
+drastically. The vast majority of the relevant financial contracts are built on 
+a manageable number of underlying mechanisms. Financial contracts follow a 
+limited number of patterns.
+
+The goal of ACTUS is to provide open, royalty-free standards for the combined 
+data and algorithmic representation of financial contracts in order to promote 
+efforts for transparent interoperability of financial contract information as 
+well as support the use of the ACTUS standards and open source software in 
+developing a broad range of applications and systems that utilize the 
+forward-looking cash flow analysis that ACTUS enables and which can provide 
+major benefits for both private and public sectors of the financial industry.
+
+Thereby, ACTUS defines two standards:
+
+
+ACTUS DATA STANDARD
+--------------------------------------------------------------------------------
+
+The Data Standard defines a universal set of legal terms – or CT Attributes – 
+used as parameters throughout the different financial agreements. It is 
+implemented in form of a Data Dictionary with Attribute Applicability by 
+Contract Type.
+
+
+ACTUS ALGORITHMIC STANDARD
+--------------------------------------------------------------------------------
+
+The Algorithmic Standard defines the logic embedded in legal agreements that 
+eventually turn the contract terms into actual cash flows, or more generally 
+business events.
+
+These two Standards together will support forward-looking financial and risk 
+analysis. ACTUS software code is available under an open source license and can 
+be integrated with any commonly used risk and finance analysis platform. 
+Maintenance of ACTUS is ensured by the not-for-profit ACTUS Financial Research 
+Foundation and the ACTUS Users Association.
+
+
+================================================================================
+ACTUS FOUNDATION
+================================================================================
+
+Project ACTUS has been incorporated in the form of two not-for-profit 
+corporations to hold the intellectual property of ACTUS and to further the 
+development as well as maintenance of the ACTUS Contract Types and their use. 
+The not-for-profit corporations with legal residence in the US are the 
+following:
+
+
+ACTUS FINANCIAL RESEARCH FOUNDATION (AFRF)
+--------------------------------------------------------------------------------
+
+The ACTUS Financial Research Foundation is the holder and curator of the 
+intellectual property of the royalty-free, open standard that is ACTUS.
+
+• Not-for-profit 501 (c)(3) Research Foundation
+• Financed by tax-deductible donations and grants
+• The AFRF is responsible for developing, maintaining and protecting the ACTUS 
+  standards
+
+
+ACTUS USERS ASSOCIATION (AUA)
+--------------------------------------------------------------------------------
+
+The ACTUS Users Association is primarily concerned with building up and further 
+developing an active community and industry support.
+
+• Not-for-profit (501)(c)(6) Industry Association
+• Financed by membership fees
+• Supports AFRF with advice and financing
+
+
+================================================================================
+BOARD OF GOVERNORS
+================================================================================
+
+WILLI BRAMMERTZ, DR. OEC
+--------------------------------------------------------------------------------
+CO-Founder of IRIS, now part of Wolters Kluwer, and father of one of the 
+world's leading financial analysis systems riskpro™.
+
+Founder of Ariadne Business Analytics; Author of the book "Unified Financial 
+Analysis – the missing links of finance" (Wiley, 2009) that provides the 
+concept on which ACTUS builds.
+
+Chair, ACTUS Users Association
+
+LinkedIn: https://www.linkedin.com/in/willi-brammertz-8240705/
+
+
+JOHN A. BOTTEGA
+--------------------------------------------------------------------------------
+Executive Director, EDM Council; Principal, Data Management Advisory Services, 
+LLC;
+
+Formerly Chief Data Officer of Citibank, Bank of America and the Federal 
+Reserve Bank of New York.
+
+LinkedIn: https://www.linkedin.com/in/johnbottega/
+
+
+JEFFERSON BRASWELL
+--------------------------------------------------------------------------------
+Founding Partner and CEO, Tahoe Blue Ltd; Chair, Technology, Operations and 
+Standards Committee of the Board of Directors, Global LEI Foundation;
+
+Formerly, President of Risk Management Technologies (RMT Berkeley, provider of 
+the Radar Enterprise Risk Management Solution, acquired by FICO).
+
+Chair, ACTUS Financial Research Foundation Board of Governors
+
+LinkedIn: https://www.linkedin.com/in/jeffersonbraswell/
+
+
+BOB MARK, DR.
+--------------------------------------------------------------------------------
+Managing Partner of Black Diamond Risk Enterprises, founding Executive Director 
+of the MFE Program at the UCLA Anderson School of Management, Co-Founder of 
+PRMIA; awarded as the Financial Risk Manager of the Year by GARP;
+
+Formerly Chief Risk Officer at several tier 1 banks as well as co-author of 
+three Risk Management books.
+
+LinkedIn: https://www.linkedin.com/in/bob-mark-6282045/
+
+
+THE HONORABLE ALLAN I. MENDELOWITZ, PH.D
+--------------------------------------------------------------------------------
+Former Chairman of the Federal Housing Finance Board and Co-Leader of the 
+Committee to Establish the National Institute of Finance.
+
+President of ACTUS Financial Research Foundation and ACTUS Users Association
+
+LinkedIn: https://www.linkedin.com/in/allan-mendelowitz-a2276b7/
+
+
+PROFESSOR HENRIETTE ELISE BREYMANN, DR. PHYS
+--------------------------------------------------------------------------------
+Professor at Zurich University of Applied Sciences, member of the Board of 
+Ariadne Business Analytics,
+
+Secretary of ACTUS Financial Research Foundation and ACTUS Users Association
+
+LinkedIn: https://www.linkedin.com/in/wolfgang-breymann-a03b5b13/
+
+
+JAN KLEIN
+--------------------------------------------------------------------------------
+CFO MCT Worldwide, formerly Professor of Finance, Equity Analyst and Venture 
+Capitalist; CPA,
+
+Treasurer of ACTUS Financial Research Foundation and ACTUS Users Association
+
+LinkedIn: https://www.linkedin.com/in/jan-klein-77335b11/
+
+
+JOSEPH LANGSAM
+--------------------------------------------------------------------------------
+Retired, Former Morgan Stanley Managing Director responsible for Fixed Income 
+Analytic Modeling. During retirement, 2 years as senior lecturer, Sloan School, 
+MIT, 6 years member Board on Mathematical Sciences and Analytics for the 
+National Academy of Sciences, and 6 years as Policy Fellow, Smith School, U. of 
+Md. Founding member of Committee to Establish the National Institute of 
+Finance. Co-Editor, Handbook on Systemic Risk
+
+
+================================================================================
+CONTRIBUTORS
+================================================================================
+
+Contributing organizations include:
+• Nucleus Finance
+• Ariadne Business Analytics
+• Casper Network
+• Deloitte
+• Stevens Institute of Technology
+• Alfred P. Sloan Foundation
+• Oded Tech
+
+
+================================================================================
+CONTACT INFORMATION
+================================================================================
+
+© 2019. ACTUS Financial Research Foundation
+
+Email: contact@actusfrf.org
+Address: 1507 Blue Meadow Road, Rockville, MD 20854 USA
+
+Website: https://www.actusfrf.org
+Twitter: https://twitter.com/ActusResearch
+LinkedIn: https://www.linkedin.com/company/actus-research/
+
+================================================================================

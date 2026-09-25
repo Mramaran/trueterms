@@ -1,0 +1,198 @@
+XBRL TO ACTUS FIELD MAPPING REFERENCE
+=======================================
+Collection: IFRS XBRL Taxonomy — TrueTerms Knowledge Base
+Purpose: Answers questions like "what XBRL tag maps to notionalPrincipal?"
+
+═══════════════════════════════════════════════════════════════
+SECTION 1 — IFRS XBRL TAGS → ACTUS CONTRACT FIELDS
+═══════════════════════════════════════════════════════════════
+
+ACTUS Field: notionalPrincipal
+  Description: The face value or principal amount of the financial instrument.
+  IFRS XBRL Tags:
+    - ifrs-full:LoansAndAdvancesToCustomers
+    - ifrs-full:NotionalAmount
+    - ifrs-full:PrincipalOutstanding
+    - ifrs-full:GrossCarryingAmountOfFinancialAssets
+    - ifrs-full:OutstandingNominalAmount
+  Example value: 5000000 (5 million INR)
+  Notes: Always a positive number representing the loan/bond face value.
+
+ACTUS Field: nominalInterestRate
+  Description: The annual interest rate stated on the contract.
+  IFRS XBRL Tags:
+    - ifrs-full:NominalInterestRate
+    - ifrs-full:EffectiveInterestRate
+    - ifrs-full:ContractualInterestRateOnFinancialInstrument
+    - ifrs-full:WeightedAverageInterestRate
+  Example value: 0.0875 (represents 8.75% per annum)
+  Notes: IFRS stores rates as decimals. 8.75% = 0.0875 in ACTUS.
+
+ACTUS Field: maturityDate
+  Description: The date when the financial instrument reaches its end of life.
+  IFRS XBRL Tags:
+    - ifrs-full:MaturityDate
+    - ifrs-full:ContractualMaturityDateOfFinancialLiabilities
+    - ifrs-full:ExpiryDate
+    - ifrs-full:TerminationDate
+  Example value: 2029-12-31 formatted as ISO 8601 in ACTUS: 2029-12-31T00:00:00
+  Notes: ACTUS requires datetime format. Date-only values get T00:00:00 appended.
+
+ACTUS Field: initialExchangeDate
+  Description: The start date of the contract when the principal was first exchanged.
+  IFRS XBRL Tags:
+    - ifrs-full:DateOfOriginationOfFinancialInstrument
+    - ifrs-full:ContractDate
+    - ifrs-full:TradeDate
+    - ifrs-full:IssueDate
+  Example value: 2024-04-01
+  Notes: Also called inception date or origination date in IFRS.
+
+ACTUS Field: currency
+  Description: The currency denomination of the financial instrument.
+  IFRS XBRL Tags:
+    - iso4217:INR (Indian Rupee)
+    - iso4217:USD (US Dollar)
+    - iso4217:EUR (Euro)
+    - iso4217:GBP (British Pound)
+    - unitRef attribute on any monetary element
+  Example value: INR
+  Notes: ISO 4217 currency codes are used in both IFRS XBRL and ACTUS.
+
+ACTUS Field: contractType
+  Description: The ACTUS contract type — determines cash flow algorithm used.
+  IFRS XBRL Inference Rules:
+    Fixed rate plus bullet repayment maps to PAM (Principal At Maturity).
+    Fixed rate plus equal installments maps to ANN (Annuity).
+    Floating rate maps to LAM (Linear Amortizer) or CLM.
+    Revolving credit maps to CSH (Cash).
+    Zero coupon bond maps to ZERO.
+  Detection method: Examine repaymentType and interestPaymentFrequency tags.
+
+ACTUS Field: cycleOfInterestPayment
+  Description: How often interest payments occur.
+  IFRS XBRL Tags:
+    - ifrs-full:FrequencyOfInterestPayments
+    - ifrs-full:InterestPaymentFrequency
+  ACTUS cycle format: P1YL0 means annual, P6ML0 means semi-annual, P3ML0 means quarterly, P1ML0 means monthly.
+  Example: annual in IFRS maps to P1YL0 in ACTUS.
+
+ACTUS Field: dayCountConvention
+  Description: How days are counted for interest calculation.
+  Common values: 30E360 means 30/360 European which is most common in IFRS.
+  A365 means Actual/365 used in India and UK. A360 means Actual/360 used in money markets.
+  Default in TrueTerms parser: 30E360.
+
+═══════════════════════════════════════════════════════════════
+SECTION 2 — US-GAAP XBRL TAGS → ACTUS CONTRACT FIELDS
+═══════════════════════════════════════════════════════════════
+
+ACTUS Field: notionalPrincipal
+  US-GAAP XBRL Tags:
+    - us-gaap:LoansAndLeasesReceivableNetReportedAmount
+    - us-gaap:NotionalAmountOfDerivativeInstruments
+    - us-gaap:DebtInstrumentFaceAmount
+    - us-gaap:LongTermDebtNoncurrent
+    - us-gaap:FinancingReceivableBeforeAllowanceForCreditLoss
+  Example value: 10000000 which is 10 million USD.
+
+ACTUS Field: nominalInterestRate
+  US-GAAP XBRL Tags:
+    - us-gaap:DebtInstrumentInterestRateStatedPercentage
+    - us-gaap:DebtInstrumentInterestRateEffectivePercentage
+    - us-gaap:LongtermDebtWeightedAverageInterestRate
+  Notes: US-GAAP sometimes stores as percentage 6.5 not decimal 0.065. Parser handles both.
+
+ACTUS Field: maturityDate
+  US-GAAP XBRL Tags:
+    - us-gaap:DebtInstrumentMaturityDate
+    - us-gaap:FinancialInstrumentMaturityDate
+    - us-gaap:LongTermDebtMaturityDate
+
+ACTUS Field: initialExchangeDate
+  US-GAAP XBRL Tags:
+    - us-gaap:DebtInstrumentIssuanceDate
+    - us-gaap:DebtInstrumentOriginationDate
+    - us-gaap:FinancingReceivableOriginationDate
+
+═══════════════════════════════════════════════════════════════
+SECTION 3 — RBI / INDIA-SPECIFIC XBRL EXTENSIONS
+═══════════════════════════════════════════════════════════════
+
+Indian banks file with RBI under Ind AS (Indian Accounting Standards),
+which is converged with IFRS. They use IFRS tags plus custom RBI extensions.
+
+Common RBI Custom Tags:
+  in-bfsi:LoanAccountNumber maps to contractID in ACTUS.
+  in-bfsi:SanctionedLoanAmount maps to notionalPrincipal.
+  in-bfsi:AnnualInterestRateCharged maps to nominalInterestRate.
+  in-bfsi:LoanMaturityDate maps to maturityDate.
+  in-bfsi:DisbursementDate maps to initialExchangeDate.
+  in-bfsi:LoanCurrency maps to currency (always INR for domestic loans).
+  in-bfsi:RepaymentFrequency maps to cycleOfInterestPayment.
+  in-bfsi:LoanType is used to infer contractType (PAM vs ANN).
+
+RBI mandates XBRL filings from: Scheduled Commercial Banks, NBFCs, HFCs.
+
+═══════════════════════════════════════════════════════════════
+SECTION 4 — XBRL CONCEPTS EXPLAINED
+═══════════════════════════════════════════════════════════════
+
+What is XBRL?
+  XBRL (eXtensible Business Reporting Language) is an XML-based standard for
+  financial reporting. Every number in a bank's annual report filed with a
+  regulator has a standardized tag, context (time period, entity), and unit.
+
+What is an XBRL Instance Document?
+  The actual XML file submitted by a bank to RBI or SEC. Contains real financial
+  data tagged with taxonomy elements. File extension is .xml or .xbrl.
+
+What is an XBRL Taxonomy?
+  The dictionary of allowed tags. IFRS publishes the IFRS taxonomy annually.
+  US GAAP publishes the US-GAAP taxonomy. Both are free and publicly available.
+
+What is an XBRL context?
+  Defines the time period and entity for a reported value. Example:
+  contextRef="FY2024" means the value is for fiscal year 2024.
+  TrueTerms extracts period-end values as contract field values.
+
+What is a namespace in XBRL?
+  A prefix identifying which taxonomy a tag belongs to.
+  ifrs-full: means IFRS taxonomy.
+  us-gaap: means US-GAAP taxonomy.
+  in-bfsi: means Indian BFSI custom taxonomy.
+  iso4217: means Currency codes.
+  The TrueTerms parser strips namespaces for generic matching.
+
+═══════════════════════════════════════════════════════════════
+SECTION 5 — ACTUS CONTRACT TYPE DETECTION FROM XBRL
+═══════════════════════════════════════════════════════════════
+
+PAM (Principal At Maturity):
+  Full principal repaid at maturity date only. Interest paid periodically.
+  Typical for: corporate bonds, bullet loans, government bonds.
+  XBRL signals: maturityDate present, no amortization schedule tags.
+
+ANN (Annuity):
+  Equal periodic payments covering both principal and interest. Like an EMI home loan.
+  XBRL signals: emi or installment tags, equalInstallments=true.
+  Indian home loans are almost always ANN type.
+
+LAM (Linear Amortizer):
+  Principal repaid in equal installments, interest on declining balance.
+  XBRL signals: equalPrincipalRepayment tags.
+
+CSH (Cash):
+  No maturity, no interest, pure cash account like savings or current account.
+  XBRL signals: demandDeposit=true, noMaturityDate.
+
+ZERO (Zero Coupon):
+  No periodic interest, only principal plus accrued at maturity.
+  XBRL signals: zeroCoupon=true, nominalRate=0.
+
+Confidence Score Calculation in TrueTerms:
+  Each required ACTUS field found adds 15 points to confidence score.
+  Required fields: contractType, initialExchangeDate, maturityDate,
+  notionalPrincipal, nominalInterestRate, currency.
+  Maximum score is 100 percent when all required fields are found.
+  ready_to_run is set to true when confidence is 60 percent or higher.

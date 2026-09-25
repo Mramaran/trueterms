@@ -1,0 +1,117 @@
+Applicability rule Description
+
+Master Syntax: a(b,c,d)e 
+
+ a - Base Applicability Rule -  NN / x / (blank) - Determines if a Contract Attribute (CA) is mandatory, optional, or not applicable for a Contract Type (CT)
+
+b - Group Number - Integer (1–9)Identifies which conditional business rule group the attribute belongs to
+
+c - Trigger/Dependency - Position - 0 / 1 / 2 / 3 / 4 - Defines the role of the attribute within its group (trigger, dependent, sub-dependent, etc.)
+
+d - Parent-Child Context Rule - Integer (1, 2, 3) - Additional applicability rule for stand-alone vs parent-child contract structures 
+
+e - Cross-Group Rule - (suffix) - Integer (1, 2) - Special rule governing the value of a CA in one group based on a CA in another group
+
+
+The group number clusters related attributes into logical business rule groups. All attributes sharing the same group number are governed by the same trigger attribute.
+
+"feature_groups": 
+      "1": "Fee Structure",
+      "2": "Interest Payment Cycles",
+      "3": "Interest Calculation Base",
+      "4": "Principal Redemption Schedule",
+      "5": "Purchase Provisions",
+      "6": "Termination Provisions",
+      "7": "Scaling/Indexation",
+      "8": "Prepayment/Optionality",
+      "9": "Variable Interest Rate"  
+    
+
+NN -- Not Null -- Attribute MUST be provided; cannot be empty/null - The attribute is always required for this contract type
+
+(blank/empty) -- Not Applicable -- Attribute does NOT apply to this contract type at all -- The attribute has no meaning for this contract type and should not be present 
+
+NN* -- Not Null (Inherited) -- Mandatory, but may be inherited from parent/child structure -- Used in parent-child contexts where the currency or other attributes flow from linked contracts
+
+NN(,,1) -- Mandatory, group rule 1 -- Mandatory, subject to conditional group rule (no group, commonly for status Date, creatorID)
+
+NN(,,2) -- Mandatory with context rule 2 (often for counterpartyID in certain CTs)
+
+NN(,,3) -- Mandatory with context rule 3 
+
+NN(1,1, ) -- Mandatory dependent in Group 1 (Fees) 
+
+NN(1,1,) -- Mandatory dependent in Group 1 (Dividends)
+
+NN(1,1,1) -- Mandatory dependent in Group 1, context rule 1
+
+NN(2,0,) -- Mandatory trigger for Group 2
+
+NN(3,3 ,) -- Mandatory tertiary-dependent in Group 3
+
+NN(4,0,) -- Mandatory trigger for Group 4
+
+NN(5,1,1) -- Mandatory dependent in Group 5, context rule 1
+
+NN(6,1,1) -- Mandatory dependent in Group 6, context rule 1
+
+NN(7,1,) -- Mandatory dependent in Group 7 (Scaling)
+
+NN(9,1,) -- Mandatory dependent in Group 9 (Rate Reset)
+
+x -- Optional Attribute --- Attribute CAN be provided but is NOT required -- The attribute may be set if applicable to the specific contract instance
+
+x(,,) -- Optional (explicit empty params) 
+
+x(,,1) -- Optional, context rule 1
+
+x(1,0, ) -- Optional TRIGGER for Group 1 (Fees)
+ 
+x(1,0,) -- Optional, Group 1, Trigger -- This is the trigger attribute for Group 1 — setting it activates the group
+
+x(1,0,1) -- Optional TRIGGER for Group 1, context rule 1
+
+x(1,1, ) -- Optional dependent in Group 1
+
+x(1,1,) -- Optional dependent in Group 1
+
+x(1,2, ) -- Optional sub-dependent in Group 1
+
+x(2,0,) -- Optional TRIGGER for Group 2
+
+x(2,1,)1 -- Optional dependent in Group 2 + cross-group rule 1
+
+x(3,0,) -- Optional TRIGGER for Group 3
+
+x(3,4 ,) -- Optional quaternary-dependent in Group 3
+
+x(4,0,) -- Optional TRIGGER for Group 4
+
+x(4,2,) -- Optional sub-dependent in Group 4
+
+x(4,2,)2 -- Optional sub-dependent in Group 4 + cross-group rule 2
+
+x(5,0,1) -- x(5,0,1)Optional TRIGGER for Group 5, context rule 1 
+
+x(6,0,1) -- x(6,0,1)Optional TRIGGER for Group 6, context rule 1 
+
+x(7,0,) -- Optional TRIGGER for Group 7 (Scaling)
+
+x(7,2,) -- Optional sub-dependent in Group 7
+
+x(8,0,) -- Optional TRIGGER for Group 8 (Optionality)
+
+x(8,1,) -- Optional dependent in Group 8
+
+x(8,1,1) -- Optional dependent in Group 8, context rule 1
+
+x(9,0,) -- Optional TRIGGER for Group 9 (Rate Reset)
+
+x(9,0,)2 -- Optional TRIGGER for Group 9 + cross-group rule 2
+
+x(9,1,) -- Optional dependent in Group 9
+
+x(9,1,)1 -- Optional dependent in Group 9 + cross-group rule 1
+
+x(9,2,) -- Optional sub-dependent in Group 9
+

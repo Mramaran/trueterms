@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Secrets — NEVER commit this
+.env
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.vite/

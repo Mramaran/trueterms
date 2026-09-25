@@ -1,0 +1,796 @@
+{
+  "info": {
+    "_postman_id": "f398de32-ea23-4012-9f3f-186b23fee07f",
+    "name": "ACTUS PAM Contracts - 20 Examples",
+    "description": "Collection of 20 diverse PAM (Principal at Maturity) contract generation examples for testing TrueTerms API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50574740",
+    "_collection_link": "https://go.postman.co/collection/50574740-f398de32-ea23-4012-9f3f-186b23fee07f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. Simple Short-term Loan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create a PAM contract where Tech Startup Inc borrows $25,000 from Angel Investor LLC. Loan starts on February 1, 2025, matures on August 1, 2025. Interest rate is 8% annually, paid monthly.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "Simple 6-month loan with monthly interest payments"
+      },
+      "response": []
+    },
+    {
+      "name": "2. Corporate Bond Style",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate a PAM bond where GreenEnergy Corp issues a $500,000 bond to Institutional Investors. Issue date: March 15, 2025. Maturity: March 15, 2030. Coupon rate: 4.5% paid semi-annually.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "5-year corporate bond with semi-annual coupon payments"
+      },
+      "response": []
+    },
+    {
+      "name": "3. Real Estate Bridge Loan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create a PAM loan for Property Developers LLC borrowing $750,000 from Commercial Bank. Start: January 10, 2025. Maturity: January 10, 2026. Interest: 7.25% quarterly payments.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "1-year bridge loan for real estate development"
+      },
+      "response": []
+    },
+    {
+      "name": "4. Micro Loan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate a small PAM contract where Local Business borrows $5,000 from Community Credit Union. Starts April 1, 2025, ends October 1, 2025. Interest rate 12% per annum, monthly interest payments.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "Small business micro-loan with 6-month term"
+      },
+      "response": []
+    },
+    {
+      "name": "5. Long-term Infrastructure Financing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create a PAM contract for Infrastructure Development Corp borrowing $10,000,000 from Government Development Bank. Start date: May 1, 2025. Maturity: May 1, 2040. Interest: 3.75% paid annually.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "15-year infrastructure project financing"
+      },
+      "response": []
+    },
+    {
+      "name": "6. Agricultural Seasonal Loan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM loan where Farmland Cooperative borrows $150,000 from Agricultural Bank. Loan starts June 1, 2025, matures December 1, 2025. Interest rate 6.5%, interest paid at maturity.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "Seasonal agricultural loan with bullet payment at maturity"
+      },
+      "response": []
+    },
+    {
+      "name": "7. Working Capital Loan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create a PAM contract for Manufacturing Ltd borrowing $300,000 from Regional Bank. Start: February 15, 2025. Maturity: February 15, 2026. Interest: 9% per annum with quarterly payments.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "1-year working capital financing for manufacturing"
+      },
+      "response": []
+    },
+    {
+      "name": "8. Equipment Financing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM loan where Medical Clinic borrows $200,000 from Equipment Finance Co. Starts March 1, 2025, matures March 1, 2028. Interest rate 5.5% paid monthly.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "3-year medical equipment financing"
+      },
+      "response": []
+    },
+    {
+      "name": "9. Export Financing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create a PAM contract for Export Trading Company borrowing $450,000 from Trade Finance Bank. Start date: April 20, 2025. Maturity: October 20, 2025. Interest: 7% quarterly.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "6-month export trade financing"
+      },
+      "response": []
+    },
+    {
+      "name": "10. Student Loan Style",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM loan where Graduate Student borrows $40,000 from Education Finance Corp. Starts September 1, 2025, matures September 1, 2030. Interest rate 4.25% paid semi-annually.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "5-year education loan with deferred principal"
+      },
+      "response": []
+    },
+    {
+      "name": "11. High-Yield Corporate Debt",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create a PAM bond where Expansion Corp issues $2,000,000 in bonds to Hedge Fund Investors. Issue: January 5, 2025. Maturity: January 5, 2028. Coupon: 11.5% paid quarterly.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "High-yield 3-year corporate bond"
+      },
+      "response": []
+    },
+    {
+      "name": "12. Short-term Treasury Style",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM instrument where City Municipality borrows $1,000,000 from Pension Fund. Start: February 1, 2025. Maturity: May 1, 2025. Interest: 3.25% paid at maturity.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "3-month municipal short-term note"
+      },
+      "response": []
+    },
+    {
+      "name": "13. Convertible Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create PAM contract for Blockchain Startup borrowing $100,000 from VC Fund. Starts March 10, 2025, matures March 10, 2027. Interest rate 6% paid annually.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "2-year startup convertible note"
+      },
+      "response": []
+    },
+    {
+      "name": "14. Trade Finance LC Backing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM loan where Import Company borrows $650,000 from International Trade Bank. Start: April 1, 2025. Maturity: July 1, 2025. Interest: 8.5% monthly payments.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "3-month letter of credit backing facility"
+      },
+      "response": []
+    },
+    {
+      "name": "15. Renewable Energy Project Bond",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create PAM bond where Solar Farm LLC issues $5,000,000 to Green Investment Fund. Issue date: May 15, 2025. Maturity: May 15, 2035. Interest: 4.75% semi-annually.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "10-year green energy project bond"
+      },
+      "response": []
+    },
+    {
+      "name": "16. Inventory Financing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM contract for Retail Chain borrowing $800,000 from Commercial Lender. Starts June 1, 2025, matures December 31, 2025. Interest rate 10% with monthly payments.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "7-month inventory financing for retail"
+      },
+      "response": []
+    },
+    {
+      "name": "17. Construction Loan",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create PAM loan where Residential Builder borrows $1,500,000 from Construction Finance Bank. Start: July 1, 2025. Maturity: July 1, 2027. Interest: 7.75% paid quarterly.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "2-year residential construction loan"
+      },
+      "response": []
+    },
+    {
+      "name": "18. Zero-Coupon Style",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM contract where Tech Company borrows $250,000 from Private Investor. Loan starts August 1, 2025, matures August 1, 2026. Interest rate 5%, all interest paid at maturity with principal.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "Zero-coupon style with bullet payment"
+      },
+      "response": []
+    },
+    {
+      "name": "19. Subordinated Debt",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Create PAM subordinated loan where Growth Company borrows $350,000 from Mezzanine Fund. Start: September 1, 2025. Maturity: September 1, 2029. Interest: 13.5% paid quarterly.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "4-year subordinated mezzanine debt"
+      },
+      "response": []
+    },
+    {
+      "name": "20. International Multi-Currency",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"naturalLanguageInput\": \"Generate PAM loan where Global Corp borrows €400,000 from European Investment Bank. Starts October 1, 2025, matures October 1, 2028. Interest rate 3.5% paid semi-annually in EUR.\",\n  \"contractType\": \"PAM\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/actus/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "actus",
+            "generate"
+          ]
+        },
+        "description": "3-year EUR-denominated international loan"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test(\"Status code is 200\", function () {",
+          "    pm.response.to.have.status(200);",
+          "});",
+          "",
+          "pm.test(\"Response has contractType\", function () {",
+          "    var jsonData = pm.response.json();",
+          "    pm.expect(jsonData).to.have.property('contractType');",
+          "});",
+          "",
+          "pm.test(\"Response has actusContract\", function () {",
+          "    var jsonData = pm.response.json();",
+          "    pm.expect(jsonData).to.have.property('actusContract');",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "api_endpoint",
+      "value": "/api/actus/generate",
+      "type": "string"
+    }
+  ]
+}

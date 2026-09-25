@@ -1,0 +1,1513 @@
+{
+  "info": {
+    "_postman_id": "28bb702c-37f9-4fa3-84d2-5881224b1f4f",
+    "name": "ACTUS_example_Contracts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50574740",
+    "_collection_link": "https://go.postman.co/collection/50574740-28bb702c-37f9-4fa3-84d2-5881224b1f4f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "COM-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"COM\",\r\n\"contractID\": \"com01\",\r\n\"statusDate\": \"2014-12-30T00:00:00\",\r\n\"contractDealDate\": \"2014-12-15T00:00:00\",\r\n\"purchaseDate\": \"2015-03-30T00:00:00\",\r\n\"priceAtPurchaseDate\": 700,\r\n\"contractRole\": \"RPL\",\r\n\"currency\": \"USD\",\r\n\"quantity\": 2,\r\n\"unit\": \"BRL\",\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CSH-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"CSH\",\r\n\"statusDate\": \"2015-07-15T00:00:00\",\r\n\"contractRole\": \"RPA\",\r\n\"contractID\": \"csh01\",\r\n\"currency\": \"CHF\",\r\n\"notionalPrincipal\": 1000,\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "STK-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"STK\",\r\n\"contractID\": \"stk01\",\r\n\"contractRole\": \"RPA\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"notionalPrincipal\": 1000,\r\n\"currency\": \"USD\",\r\n\"purchaseDate\": \"2013-01-01T00:00:00\",\r\n\"priceAtPurchaseDate\": 1100,\r\n\"endOfMonthConvention\": \"EOM\",\r\n\"quantity\": 1,\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CLM-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"CLM\",\r\n\"contractID\": \"clm01\",\r\n\"statusDate\": \"2015-08-20T00:00:00\",\r\n\"contractRole\": \"RPA\",\r\n\"calendar\": \"NC\",\r\n\"endOfMonthConvention\": \"SD\",\r\n\"cycleOfInterestPayment\": \"P1ML1\",\r\n\"nominalInterestRate\": 0.12,\r\n\"dayCountConvention\": \"AA\",\r\n\"currency\": \"CHF\",\r\n\"contractDealDate\": \"2015-07-18T00:00:00\",\r\n\"initialExchangeDate\": \"2015-08-20T00:00:00\",\r\n\"maturityDate\": \"2015-09-20T00:00:00\",\r\n\"notionalPrincipal\": 1000,\r\n\"xDayNotice\": \"P1M\",\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FXOUT -WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"FXOUT\",\r\n\"contractID\": \"fxout01\",\r\n\"contractRole\": \"RPA\",\r\n\"currency\": \"USD\",\r\n\"currency2\": \"EUR\",\r\n\"maturityDate\": \"2014-12-31T23:59:59\",\r\n\"notionalPrincipal\": 2000,\r\n\"notionalPrincipal2\": 1000,\r\n\"calendar\": \"NOCALENDAR\",\r\n\"endOfMonthConvention\": \"SD\",\r\n\"statusDate\": \"2013-12-30T00:00:00\",\r\n\"contractDealDate\": \"2013-12-20T00:00:00\",\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UMP-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"UMP\",\r\n\"contractID\": \"ump01\",\r\n\"statusDate\": \"2012-12-15T00:00:00\",\r\n\"contractRole\": \"RPA\",\r\n\"currency\": \"USD\",\r\n\"contractDealDate\": \"2012-12-15T00:00:00\",\r\n\"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n\"notionalPrincipal\": 1000,\r\n\"dayCountConvention\": \"30E360\",\r\n\"xDayNotice\": \"P1M\",\r\n\"nominalInterestRate\": 0,\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SWPPV1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"contracts\":[{\"calendar\":\"WEEKDAY\", \"businessDayConvention\":\"SCF\",\"contractType\":\"ANN\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"ann-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P1YL0\",\"cycleAnchorDateOfPrincipalRedemption\":\"2016-01-02T00:00:00\",\"cycleOfPrincipalRedemption\":\"P1YL0\",\"nominalInterestRate\":0.04,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":2000,\"premiumDiscountAtIED\":0} ],\"riskFactors\":[]}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LAX-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"LAX\",\r\n\"contractID\": \"lax01\",\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\",\r\n\"statusDate\": \"2020-01-01T00:00:00\",\r\n\"contractRole\": \"RPA\",\r\n\"calendar\": \"NC\",\r\n\"businessDayConvention\": \"SCF\",\r\n\"endOfMonthConvention\": \"SD\",\r\n\"currency\": \"EUR\",\r\n\"contractDealDate\": \"2020-01-01T00:00:00\",\r\n\"initialExchangeDate\": \"2020-01-02T00:00:00\",\r\n\"maturityDate\": \"2024-12-31T00:00:00\",\r\n\"notionalPrincipal\": 100,\r\n\"arrayCycleAnchorDateOfInterestPayment\": \"2021-01-01T00:00:00\",\r\n\"arrayCycleOfInterestPayment\": \"P1YL1\",\r\n\"nominalInterestRate\": 0.05,\r\n\"dayCountConvention\": \"30E360\",\r\n\"arrayCycleAnchorDateOfPrincipalRedemption\": \"2021-01-01T00:00:00\",\r\n\"arrayCycleOfPrincipalRedemption\": \"P1YL1\",\r\n\"arrayNextPrincipalRedemptionPayment\": 20,\r\n\"arrayIncreaseDecrease\": \"DEC\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LAM-WITH-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"contracts\": [\r\n        {\r\n            \"contractType\": \"LAM\",\r\n            \"contractID\": \"lam01\",\r\n            \"contractRole\": \"RPA\",\r\n            \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n            \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n            \"statusDate\": \"2012-12-30T00:00:00\",\r\n            \"notionalPrincipal\": 5000,\r\n            \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n            \"nextPrincipalRedemptionPayment\": 500,\r\n            \"dayCountConvention\": \"A365\",\r\n            \"nominalInterestRate\": 0.08,\r\n            \"currency\": \"USD\",\r\n            \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n            \"cycleAnchorDateOfRateReset\": \"2013-04-01T00:00:00\",\r\n            \"cycleOfRateReset\": \"P3ML1\",\r\n            \"rateMultiplier\": 1,\r\n            \"rateSpread\": 0.1,\r\n            \"fixingDays\": \"P0D\",\r\n            \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n            \"cycleOfInterestPayment\": \"P1ML0\",\r\n            \"endOfMonthConvention\": \"SD\",\r\n            \"interestCalculationBase\": \"NT\",\r\n            \"marketObjectCodeOfRateReset\": \"USD.SWP\",\r\n            \"interestCalculationBaseAmount\": 0,\r\n            \"creatorID\": \"Creator-01\",\r\n            \"counterpartyID\": \"Counterparty-01\"\r\n        }\r\n    ],\r\n    \"riskFactors\": [\r\n        {\r\n            \"marketObjectCode\": \"USD.SWP\",\r\n            \"base\": 1,\r\n            \"data\": [\r\n                {\r\n                    \"time\": \"2013-04-01T00:00:00\",\r\n                    \"value\": 0.0105679012345679\r\n                },\r\n                {\r\n                    \"time\": \"2013-07-01T00:00:00\",\r\n                    \"value\": 0.011679012345679\r\n                },\r\n                {\r\n                    \"time\": \"2013-10-01T00:00:00\",\r\n                    \"value\": 0.0127901234567901\r\n                },\r\n                {\r\n                    \"time\": \"2014-01-01T00:00:00\",\r\n                    \"value\": 0.0139012345679012\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LAM-WITHOUT-RISK *",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"LAM\",\r\n      \"contractID\": \"LAM_Example_001\",\r\n      \"statusDate\": \"2024-01-01T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2024-01-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2024-01-01T00:00:00\",\r\n      \"maturityDate\": \"2029-01-01T00:00:00\",\r\n      \"notionalPrincipal\": 100000.00,\r\n      \"nominalInterestRate\": 0.05,\r\n      \"dayCountConvention\": \"A365\",\r\n      \"currency\": \"USD\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2024-04-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P3ML0\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2024-04-01T00:00:00\",\r\n      \"cycleOfPrincipalRedemption\": \"P3ML0\",\r\n      \"nextPrincipalRedemptionPayment\": 5000.00,\r\n      \"creatorID\": \"Lender001\",\r\n      \"counterpartyID\": \"Borrower001\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SWAPS-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"SWAPS\",\r\n\"contractID\": \"swaps01\",\r\n\"contractRole\": \"RFL\",\r\n\"contractStructure\": [\r\n{\r\n\"object\": {\r\n\"contractType\": \"PAM\",\r\n\"contractID\": \"swaps01-leg1\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n\"currency\": \"USD\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"notionalPrincipal\": \"1000\",\r\n\"dayCountConvention\": \"A365\",\r\n\"nominalInterestRate\": \"0.1\",\r\n\"maturityDate\": \"2014-01-01T00:00:00\",\r\n\"cycleAnchorDateOfInterestPayment\": \"2013-01-01T00:00:00\",\r\n\"cycleOfInterestPayment\": \"P1ML1\",\r\n\"premiumDiscountAtIED\": \"0\"\r\n},\r\n\"referenceType\": \"CNT\",\r\n\"referenceRole\": \"FIL\"\r\n},\r\n{\r\n\"object\": {\r\n\"contractType\": \"PAM\",\r\n\"contractID\": \"swaps01-leg2\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n\"currency\": \"USD\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"notionalPrincipal\": \"1200\",\r\n\"dayCountConvention\": \"A365\",\r\n\"nominalInterestRate\": \"0.1\",\r\n\"maturityDate\": \"2014-01-01T00:00:00\",\r\n\"cycleAnchorDateOfInterestPayment\": \"2013-01-01T00:00:00\",\r\n\"cycleOfInterestPayment\": \"P3ML1\",\r\n\"premiumDiscountAtIED\": \"0\"\r\n},\r\n\"referenceType\": \"CNT\",\r\n\"referenceRole\": \"SEL\"\r\n}\r\n],\r\n\"currency\": \"USD\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"deliverySettlement\": \"D\",\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SWAPS(Without risk)_ monthly and quaterly",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"contracts\": [\r\n{\r\n\"contractType\": \"SWAPS\",\r\n\"contractID\": \"swaps01\",\r\n\"contractRole\": \"RFL\",\r\n\"contractStructure\": [\r\n{\r\n\"object\": {\r\n\"contractType\": \"PAM\",\r\n\"contractID\": \"swaps01-leg1\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n\"currency\": \"USD\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"notionalPrincipal\": \"1000\",\r\n\"dayCountConvention\": \"A365\",\r\n\"nominalInterestRate\": \"0.1\",\r\n\"maturityDate\": \"2014-01-01T00:00:00\",\r\n\"cycleAnchorDateOfInterestPayment\": \"2013-01-01T00:00:00\",\r\n\"cycleOfInterestPayment\": \"P1ML1\",\r\n\"premiumDiscountAtIED\": \"0\"\r\n},\r\n\"referenceType\": \"CNT\",\r\n\"referenceRole\": \"FIL\"\r\n},\r\n{\r\n\"object\": {\r\n\"contractType\": \"PAM\",\r\n\"contractID\": \"swaps01-leg2\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n\"currency\": \"USD\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"notionalPrincipal\": \"1200\",\r\n\"dayCountConvention\": \"A365\",\r\n\"nominalInterestRate\": \"0.1\",\r\n\"maturityDate\": \"2014-01-01T00:00:00\",\r\n\"cycleAnchorDateOfInterestPayment\": \"2013-01-01T00:00:00\",\r\n\"cycleOfInterestPayment\": \"P3ML1\",\r\n\"premiumDiscountAtIED\": \"0\"\r\n},\r\n\"referenceType\": \"CNT\",\r\n\"referenceRole\": \"SEL\"\r\n}\r\n],\r\n\"currency\": \"USD\",\r\n\"contractDealDate\": \"2012-12-28T00:00:00\",\r\n\"statusDate\": \"2012-12-30T00:00:00\",\r\n\"deliverySettlement\": \"D\",\r\n\"creatorID\": \"Creator-01\",\r\n\"counterpartyID\": \"Counterparty-01\"\r\n}\r\n],\r\n\"riskFactors\": []\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        },
+        "description": "{  \n\"contractType\": \"SWAP\",  \n\"legs\": \\[  \n{  \n\"contractRole\": \"PAYER\",  \n\"contractType\": \"PAM\",  \n\"notional\": 100000000,  \n\"currency\": \"USD\",  \n\"fixedRate\": 0.035,  \n\"dayCountConvention\": \"ACT/360\",  \n\"paymentCycle\": \"P6M\"  \n},  \n{  \n\"contractRole\": \"RECEIVER\",  \n\"contractType\": \"ANN\",  \n\"notional\": 100000000,  \n\"currency\": \"USD\",  \n\"floatingRateIndex\": \"SOFR\",  \n\"spread\": 0.0,  \n\"dayCountConvention\": \"ACT/360\",  \n\"paymentCycle\": \"P3M\"  \n}  \n\\],  \n\"valuation\": {  \n\"method\": \"MONTE_CARLO\",  \n\"numberOfScenarios\": 10000,  \n\"timeStep\": \"P1M\",  \n\"discountCurve\": \"SOFR_OIS\",  \n\"forwardCurve\": \"SOFR\"  \n}  \n}"
+      },
+      "response": []
+    },
+    {
+      "name": "CEG-WITHOUT-RISK( try)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"contracts\": [\n    {\n      \"contractType\": \"CEG\",\n      \"contractID\": \"guarantee01\",\n      \"contractRole\": \"BUY\",\n      \"calendar\": \"MF\",\n      \"dayCountConvention\": \"A360\",\n      \"businessDayConvention\": \"CSMF\",\n      \"endOfMonthConvention\": \"SD\",\n      \"feeBasis\": \"A\",\n      \"creditEventTypeCovered\": \"DF\",\n      \"guaranteedExposure\": \"NO\",\n      \"currency\": \"USD\",\n      \"statusDate\": \"2020-01-01T00:00:00\",\n      \"maturityDate\": \"2020-12-31T00:00:00\",\n      \"purchaseDate\": \"2020-01-02T00:00:00\",\n      \"notionalPrincipal\": \"1000000\",\n      \"priceAtPurchaseDate\": \"10\",\n      \"coverageOfCreditEnhancement\": \"1\",\n      \"feeRate\": \"0\",\n      \"feeAccrued\": \"0\",\n      \"delinquencyRate\": \"0\",\n      \"priceAtTerminationDate\": \"0\",\n      \"gracePeriod\": \"5D\",\n      \"delinquencyPeriod\": \"30D\",\n      \"settlementPeriod\": \"0D\",\n      \"cycleOfFee\": \"0D-\"\n     \n    }\n  ],\n  \"riskFactors\": []\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FUTUR( with risk)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"FUTUR\",\r\n      \"contractID\": \"future01\",\r\n      \"contractRole\": \"BUY\",\r\n      \"contractStructure\": [\r\n        {\r\n          \"object\": {\r\n            \"marketObjectCode\": \"AAPL\"\r\n          },\r\n          \"referenceType\": \"MOC\",\r\n          \"referenceRole\": \"UDL\"\r\n        }\r\n      ],\r\n      \"currency\": \"USD\",\r\n      \"calendar\": \"NC\",\r\n      \"contractDealDate\": \"2020-01-01T00:00:00\",\r\n      \"statusDate\": \"2020-01-01T00:00:00\",\r\n      \"purchaseDate\": \"2020-01-02T00:00:00\",\r\n      \"priceAtPurchaseDate\": \"10\",\r\n      \"maturityDate\": \"2020-03-30T00:00:00\",\r\n      \"futuresPrice\": \"80\",\r\n      \"settlementPeriod\": \"P0D\",\r\n      \"deliverySettlement\": \"S\",\r\n      \"creatorID\": \"Creator-01\",\r\n      \"counterpartyID\": \"Counterparty-01\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"AAPL\",\r\n      \"base\": 1,\r\n      \"data\": [\r\n        { \"time\": \"2020-03-30T00:00:00\", \"value\": 63.7 },\r\n        { \"time\": \"2020-06-30T00:00:00\", \"value\": 91.2 },\r\n        { \"time\": \"2020-09-30T00:00:00\", \"value\": 115.81 }\r\n      ]\r\n    },\r\n    {\r\n      \"marketObjectCode\": \"MSFT\",\r\n      \"base\": 1,\r\n      \"data\": [\r\n        { \"time\": \"2020-03-30T00:00:00\", \"value\": 160.23 },\r\n        { \"time\": \"2020-06-30T00:00:00\", \"value\": 203.5 },\r\n        { \"time\": \"2020-09-30T00:00:00\", \"value\": 210.33 }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-ann01",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann01\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"434.866594118346\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2014-01-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-PAM01",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann01\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"434.866594118346\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2014-01-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-ann02",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann02\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"100000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"1161.08479218624\",\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"nominalInterestRate\": \"0.07\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2023-01-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-ann03",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann03\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-01-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"400.071084163282\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2014-01-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-01-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-ann04",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann04\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"6000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"567.558791709355\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2013-12-15T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-ann05",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann05\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"700\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2013-09-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-ann06",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann05\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"700\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2013-09-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "actus-tests-capfl01",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann01\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"434.866594118346\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2014-01-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    },\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann02\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"6000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"567.558791709355\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML0\",\r\n      \"maturityDate\": \"2013-12-15T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML0\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "pam_ann_contracts-testing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"capfl\",\r\n      \"contractID\": \"capfl01\",\r\n      \"contractRole\": \"BUY\",\r\n      \"contractStructure\": [\r\n        {\r\n          \"object\": {\r\n            \"contractType\": \"PAM\",\r\n            \"contractID\": \"capfl-underlying\",\r\n            \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n            \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n            \"currency\": \"USD\",\r\n            \"statusDate\": \"2012-12-30T00:00:00\",\r\n            \"notionalPrincipal\": \"1000\",\r\n            \"dayCountConvention\": \"A365\",\r\n            \"nominalInterestRate\": \"0.05\",\r\n            \"maturityDate\": \"2014-01-01T00:00:00\",\r\n            \"cycleAnchorDateOfInterestPayment\": \"2013-04-01T00:00:00\",\r\n            \"cycleOfInterestPayment\": \"P3ML1\",\r\n            \"cycleAnchorDateOfRateReset\": \"2013-04-01T00:00:00\",\r\n            \"cycleOfRateReset\": \"P3ML1\",\r\n            \"marketObjectCodeOfRateReset\": \"LIBORUSD1M\"\r\n          },\r\n          \"referenceType\": \"CNT\",\r\n          \"referenceRole\": \"UDL\"\r\n        }\r\n      ],\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"lifeCap\": \"0.07\"\r\n    },\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann06\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2012-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2013-01-01T00:00:00\",\r\n      \"statusDate\": \"2012-12-30T00:00:00\",\r\n      \"notionalPrincipal\": \"5000\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2013-02-01T00:00:00\",\r\n      \"nextPrincipalRedemptionPayment\": \"434.866594118346\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"nominalInterestRate\": \"0.08\",\r\n      \"currency\": \"USD\",\r\n      \"cycleOfPrincipalRedemption\": \"P1ML1\",\r\n      \"maturityDate\": \"2014-01-01T00:00:00\",\r\n      \"rateMultiplier\": \"1.0\",\r\n      \"rateSpread\": \"0.0\",\r\n      \"fixingDays\": \"P0D\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2013-02-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P1ML1\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PAM WITHOUT RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"contracts\": [\r\n        {\r\n            \"calendar\": \"WEEKDAY\",\r\n            \"businessDayConvention\": \"SCF\",\r\n            \"contractType\": \"PAM\",\r\n            \"statusDate\": \"2015-01-01T00:00:00\",\r\n            \"contractRole\": \"RPA\",\r\n            \"contractID\": \"Contract-01\",\r\n            \"cycleAnchorDateOfInterestPayment\": \"2016-01-02T00:00:00\",\r\n            \"cycleOfInterestPayment\": \"P1YL0\",\r\n            \"nominalInterestRate\": 0.04,\r\n            \"dayCountConvention\": \"30E360\",\r\n            \"currency\": \"USD\",\r\n            \"contractDealDate\": \"2015-01-01T00:00:00\",\r\n            \"initialExchangeDate\": \"2015-01-02T00:00:00\",\r\n            \"maturityDate\": \"2020-01-02T00:00:00\",\r\n            \"notionalPrincipal\": 2000,\r\n            \"premiumDiscountAtIED\": 0\r\n        }\r\n    ],\r\n    \"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        },
+        "description": "Generated from cURL: curl -v -k -H 'Content-Type: application/json'  --data '{\"contracts\":[{\"calendar\":\"WEEKDAY\",\"businessDayConvention\":\"SCF\",\"contractType\":\"PAM\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"Contract-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P1YL0\",\"nominalInterestRate\":0.02,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":1000,\"premiumDiscountAtIED\":0} ],\"riskFactors\":[]}' http://localhost:8083/eventsBatch"
+      },
+      "response": []
+    },
+    {
+      "name": "ANN WITHOUT RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"contracts\":[{\"calendar\":\"WEEKDAY\", \"businessDayConvention\":\"SCF\",\"contractType\":\"ANN\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"ann-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P1YL0\",\"cycleAnchorDateOfPrincipalRedemption\":\"2016-01-02T00:00:00\",\"cycleOfPrincipalRedemption\":\"P1YL0\",\"nominalInterestRate\":0.04,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":2000,\"premiumDiscountAtIED\":0} ],\"riskFactors\":[]}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        },
+        "description": "Generated from cURL: curl -v -k -H 'Content-Type: application/json'  --data '{\"contracts\":[{\"calendar\":\"WEEKDAY\", \"businessDayConvention\":\"SCF\",\"contractType\":\"ANN\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"ann-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P1YL0\",\"cycleAnchorDateOfPrincipalRedemption\":\"2016-01-02T00:00:00\",\"cycleOfPrincipalRedemption\":\"P1YL0\",\"nominalInterestRate\":0.02,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":1000,\"premiumDiscountAtIED\":0} ],\"riskFactors\":[]}' http://localhost:8083/eventsBatch"
+      },
+      "response": []
+    },
+    {
+      "name": "ANN WITH RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"contracts\":[{\"calendar\":\"WEEKDAY\",\"businessDayConvention\":\"SCF\",\"contractType\":\"ANN\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"ann-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P6ML0\",\"cycleAnchorDateOfPrincipalRedemption\":\"2016-01-02T00:00:00\",\"cycleOfPrincipalRedemption\":\"P6ML0\",\"nominalInterestRate\":0.02,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":1000,\"premiumDiscountAtIED\":0,\"cycleAnchorDateOfRateReset\": \"2015-07-02T00:00:00\",\"cycleOfRateReset\": \"P1YL1\",\"rateSpread\":0.01,\"marketObjectCodeOfRateReset\":\"ust5Y\"}],\"riskFactors\":[{\"marketObjectCode\":\"ust5Y\",\"base\": 1.0, \"data\":[{\"time\":\"2014-01-01T00:00:00\",\"value\": 0.04},{\"time\":\"2015-03-01T00:00:00\",\"value\": 0.039},{\"time\":\"2016-06-01T00:00:00\",\"value\": 0.038},{\"time\":\"2017-12-01T00:00:00\",\"value\": 0.037},{\"time\":\"2018-02-01T00:00:00\",\"value\": 0.036},{\"time\":\"2019-05-01T00:00:00\",\"value\": 0.035}]}]}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        },
+        "description": "Generated from cURL: curl -v -H 'Content-Type: application/json'  --data '{\"contracts\":[{\"calendar\":\"WEEKDAY\",\"businessDayConvention\":\"SCF\",\"contractType\":\"ANN\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"ann-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P6ML0\",\"cycleAnchorDateOfPrincipalRedemption\":\"2016-01-02T00:00:00\",\"cycleOfPrincipalRedemption\":\"P6ML0\",\"nominalInterestRate\":0.02,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":1000,\"premiumDiscountAtIED\":0,\"cycleAnchorDateOfRateReset\": \"2015-07-02T00:00:00\",\"cycleOfRateReset\": \"P1YL1\",\"rateSpread\":0.01,\"marketObjectCodeOfRateReset\":\"ust5Y\"}],\"riskFactors\":[{\"marketObjectCode\":\"ust5Y\",\"base\": 1.0, \"data\":[{\"time\":\"2014-01-01T00:00:00\",\"value\": 0.04},{\"time\":\"2015-03-01T00:00:00\",\"value\": 0.039},{\"time\":\"2016-06-01T00:00:00\",\"value\": 0.038},{\"time\":\"2017-12-01T00:00:00\",\"value\": 0.037},{\"time\":\"2018-02-01T00:00:00\",\"value\": 0.036},{\"time\":\"2019-05-01T00:00:00\",\"value\": 0.035}]}]}' http://localhost:8083/eventsBatch"
+      },
+      "response": []
+    },
+    {
+      "name": "PAM WITH RISK",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"contracts\": [\r\n        {\r\n            \"calendar\": \"WEEKDAY\",\r\n            \"businessDayConvention\": \"SCF\",\r\n            \"contractType\": \"PAM\",\r\n            \"statusDate\": \"2015-01-01T00:00:00\",\r\n            \"contractRole\": \"RPA\",\r\n            \"contractID\": \"Contract-01\",\r\n            \"cycleAnchorDateOfInterestPayment\": \"2016-01-02T00:00:00\",\r\n            \"cycleOfInterestPayment\": \"P6ML0\",\r\n            \"nominalInterestRate\": 0.02,\r\n            \"dayCountConvention\": \"30E360\",\r\n            \"currency\": \"USD\",\r\n            \"contractDealDate\": \"2015-01-01T00:00:00\",\r\n            \"initialExchangeDate\": \"2015-01-02T00:00:00\",\r\n            \"maturityDate\": \"2020-01-02T00:00:00\",\r\n            \"notionalPrincipal\": 1000,\r\n            \"premiumDiscountAtIED\": 0,\r\n            \"cycleAnchorDateOfRateReset\": \"2015-07-02T00:00:00\",\r\n            \"cycleOfRateReset\": \"P1YL1\",\r\n            \"rateSpread\": 0.01,\r\n            \"marketObjectCodeOfRateReset\": \"ust5Y\"\r\n        }\r\n    ],\r\n    \"riskFactors\": [\r\n        {\r\n            \"marketObjectCode\": \"ust5Y\",\r\n            \"base\": 1.0,\r\n            \"data\": [\r\n                {\r\n                    \"time\": \"2014-01-01T00:00:00\",\r\n                    \"value\": 0.04\r\n                },\r\n                {\r\n                    \"time\": \"2015-03-01T00:00:00\",\r\n                    \"value\": 0.039\r\n                },\r\n                {\r\n                    \"time\": \"2016-06-01T00:00:00\",\r\n                    \"value\": 0.038\r\n                },\r\n                {\r\n                    \"time\": \"2017-12-01T00:00:00\",\r\n                    \"value\": 0.037\r\n                },\r\n                {\r\n                    \"time\": \"2018-02-01T00:00:00\",\r\n                    \"value\": 0.036\r\n                },\r\n                {\r\n                    \"time\": \"2019-05-01T00:00:00\",\r\n                    \"value\": 0.035\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        },
+        "description": "Generated from cURL: curl -v -H 'Content-Type: application/json'  --data '{\"contracts\":[{\"calendar\":\"WEEKDAY\",\"businessDayConvention\":\"SCF\",\"contractType\":\"PAM\",\"statusDate\":\"2015-01-01T00:00:00\",\"contractRole\":\"RPA\",\"contractID\":\"Contract-01\",\"cycleAnchorDateOfInterestPayment\":\"2016-01-02T00:00:00\",\"cycleOfInterestPayment\":\"P6ML0\",\"nominalInterestRate\":0.02,\"dayCountConvention\":\"30E360\",\"currency\":\"USD\",\"contractDealDate\":\"2015-01-01T00:00:00\",\"initialExchangeDate\":\"2015-01-02T00:00:00\",\"maturityDate\":\"2020-01-02T00:00:00\",\"notionalPrincipal\":1000,\"premiumDiscountAtIED\":0,\"cycleAnchorDateOfRateReset\": \"2015-07-02T00:00:00\",\"cycleOfRateReset\": \"P1YL1\",\"rateSpread\":0.01,\"marketObjectCodeOfRateReset\":\"ust5Y\"}],\"riskFactors\":[{\"marketObjectCode\":\"ust5Y\",\"base\": 1.0, \"data\":[{\"time\":\"2014-01-01T00:00:00\",\"value\": 0.04},{\"time\":\"2015-03-01T00:00:00\",\"value\": 0.039},{\"time\":\"2016-06-01T00:00:00\",\"value\": 0.038},{\"time\":\"2017-12-01T00:00:00\",\"value\": 0.037},{\"time\":\"2018-02-01T00:00:00\",\"value\": 0.036},{\"time\":\"2019-05-01T00:00:00\",\"value\": 0.035}]}]}' http://localhost:8083/eventsBatch"
+      },
+      "response": []
+    },
+    {
+      "name": "LAM-WITHOUT-RISK",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"LAM\",\r\n      \"contractID\": \"LAM_Example_001\",\r\n      \"statusDate\": \"2024-01-01T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2024-01-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2024-01-01T00:00:00\",\r\n      \"maturityDate\": \"2029-01-01T00:00:00\",\r\n      \"notionalPrincipal\": 100000.00,\r\n      \"nominalInterestRate\": 0.05,\r\n      \"dayCountConvention\": \"A365\",\r\n      \"currency\": \"USD\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2024-04-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P3ML0\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2024-04-01T00:00:00\",\r\n      \"cycleOfPrincipalRedemption\": \"P3ML0\",\r\n      \"nextPrincipalRedemptionPayment\": 5000.00,\r\n      \"creatorID\": \"Lender001\",\r\n      \"counterpartyID\": \"Borrower001\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ADV-EX-2-MULTI-CT-WITH-RISK",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"pam1\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2024-12-31T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-01T00:00:00\",\r\n      \"maturityDate\": \"2028-01-01T00:00:00\",\r\n      \"notionalPrincipal\": 10000,\r\n      \"nominalInterestRate\": 0.02,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2024-12-31T00:00:00\",\r\n      \"counterpartyID\": \"CP01\",\r\n      \"creatorID\": \"Bank01\",\r\n      \"cycleOfInterestPayment\": \"P1YL1\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"pam2\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2024-12-31T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-02T00:00:00\",\r\n      \"maturityDate\": \"2028-01-02T00:00:00\",\r\n      \"notionalPrincipal\": 11000,\r\n      \"nominalInterestRate\": 0.022,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2024-12-31T00:00:00\",\r\n      \"counterpartyID\": \"CP01\",\r\n      \"creatorID\": \"Bank01\",\r\n      \"cycleOfInterestPayment\": \"P6ML1\"\r\n    },\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"ann1\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2024-12-31T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-02-01T00:00:00\",\r\n      \"maturityDate\": \"2029-02-01T00:00:00\",\r\n      \"notionalPrincipal\": 12000,\r\n      \"nominalInterestRate\": 0.025,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"cycleOfInterestPayment\": \"P1YL1\",\r\n      \"cycleOfPrincipalRedemption\": \"P1YL1\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-02-01T00:00:00\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2026-02-01T00:00:00\",\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2024-12-31T00:00:00\",\r\n      \"counterpartyID\": \"CP01\",\r\n      \"creatorID\": \"Bank01\"\r\n    },\r\n    {\r\n      \"contractType\": \"ANN\",\r\n      \"contractID\": \"vann1\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2024-12-31T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-03-01T00:00:00\",\r\n      \"maturityDate\": \"2029-03-01T00:00:00\",\r\n      \"notionalPrincipal\": 15000,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"cycleOfInterestPayment\": \"P1YL1\",\r\n      \"cycleOfPrincipalRedemption\": \"P1YL1\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-03-01T00:00:00\",\r\n      \"cycleAnchorDateOfPrincipalRedemption\": \"2026-03-01T00:00:00\",\r\n      \"cycleOfRateReset\": \"P6ML1\",\r\n      \"marketObjectCodeOfRateReset\": \"US_Floating_6M\",\r\n      \"rateSpread\": 0.01,\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2024-12-31T00:00:00\",\r\n      \"counterpartyID\": \"CP02\",\r\n      \"creatorID\": \"Bank01\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"US_Floating_6M\",\r\n      \"base\": 1,\r\n      \"data\": [\r\n        {\r\n          \"time\": \"2025-01-01T00:00:00\",\r\n          \"value\": 0.025\r\n        },\r\n        {\r\n          \"time\": \"2025-07-01T00:00:00\",\r\n          \"value\": 0.027\r\n        },\r\n        {\r\n          \"time\": \"2026-01-01T00:00:00\",\r\n          \"value\": 0.028\r\n        },\r\n        {\r\n          \"time\": \"2026-07-01T00:00:00\",\r\n          \"value\": 0.029\r\n        },\r\n        {\r\n          \"time\": \"2027-01-01T00:00:00\",\r\n          \"value\": 0.03\r\n        },\r\n        {\r\n          \"time\": \"2027-07-01T00:00:00\",\r\n          \"value\": 0.031\r\n        },\r\n        {\r\n          \"time\": \"2028-01-01T00:00:00\",\r\n          \"value\": 0.032\r\n        },\r\n        {\r\n          \"time\": \"2028-07-01T00:00:00\",\r\n          \"value\": 0.033\r\n        },\r\n        {\r\n          \"time\": \"2029-01-01T00:00:00\",\r\n          \"value\": 0.034\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SCF-DYN-DISC-With-lin-risk-t1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"Invoice1\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2025-01-28T00:00:00\",\r\n      \"contractDealDate\": \"2025-01-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-28T00:00:00\",\r\n      \"notionalPrincipal\": 1000,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"currency\": \"USD\",\r\n      \"counterpartyID\": \"Supplier01\",\r\n      \"creatorID\": \"Buyer01\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"Invoice2\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2025-01-28T00:00:00\",\r\n      \"contractDealDate\": \"2025-01-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-28T00:00:00\",\r\n      \"notionalPrincipal\": 10000,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"currency\": \"USD\",\r\n      \"counterpartyID\": \"Supplier01\",\r\n      \"creatorID\": \"Buyer01\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"DD_Yield_Curve\",\r\n      \"base\": 1,\r\n      \"data\": [\r\n        {\r\n          \"time\": \"2025-01-29T00:00:00\",\r\n          \"value\": 0.02\r\n        },\r\n        {\r\n          \"time\": \"2025-01-30T00:00:00\",\r\n          \"value\": 0.0193\r\n        },\r\n        {\r\n          \"time\": \"2025-01-31T00:00:00\",\r\n          \"value\": 0.0187\r\n        },\r\n        {\r\n          \"time\": \"2025-02-01T00:00:00\",\r\n          \"value\": 0.018\r\n        },\r\n        {\r\n          \"time\": \"2025-02-02T00:00:00\",\r\n          \"value\": 0.0173\r\n        },\r\n        {\r\n          \"time\": \"2025-02-03T00:00:00\",\r\n          \"value\": 0.0167\r\n        },\r\n        {\r\n          \"time\": \"2025-02-04T00:00:00\",\r\n          \"value\": 0.016\r\n        },\r\n        {\r\n          \"time\": \"2025-02-05T00:00:00\",\r\n          \"value\": 0.0153\r\n        },\r\n        {\r\n          \"time\": \"2025-02-06T00:00:00\",\r\n          \"value\": 0.0147\r\n        },\r\n        {\r\n          \"time\": \"2025-02-07T00:00:00\",\r\n          \"value\": 0.014\r\n        },\r\n        {\r\n          \"time\": \"2025-02-08T00:00:00\",\r\n          \"value\": 0.0133\r\n        },\r\n        {\r\n          \"time\": \"2025-02-09T00:00:00\",\r\n          \"value\": 0.0127\r\n        },\r\n        {\r\n          \"time\": \"2025-02-10T00:00:00\",\r\n          \"value\": 0.012\r\n        },\r\n        {\r\n          \"time\": \"2025-02-11T00:00:00\",\r\n          \"value\": 0.0113\r\n        },\r\n        {\r\n          \"time\": \"2025-02-12T00:00:00\",\r\n          \"value\": 0.0107\r\n        },\r\n        {\r\n          \"time\": \"2025-02-13T00:00:00\",\r\n          \"value\": 0.01\r\n        },\r\n        {\r\n          \"time\": \"2025-02-14T00:00:00\",\r\n          \"value\": 0.0093\r\n        },\r\n        {\r\n          \"time\": \"2025-02-15T00:00:00\",\r\n          \"value\": 0.0087\r\n        },\r\n        {\r\n          \"time\": \"2025-02-16T00:00:00\",\r\n          \"value\": 0.008\r\n        },\r\n        {\r\n          \"time\": \"2025-02-17T00:00:00\",\r\n          \"value\": 0.0073\r\n        },\r\n        {\r\n          \"time\": \"2025-02-18T00:00:00\",\r\n          \"value\": 0.0067\r\n        },\r\n        {\r\n          \"time\": \"2025-02-19T00:00:00\",\r\n          \"value\": 0.006\r\n        },\r\n        {\r\n          \"time\": \"2025-02-20T00:00:00\",\r\n          \"value\": 0.0053\r\n        },\r\n        {\r\n          \"time\": \"2025-02-21T00:00:00\",\r\n          \"value\": 0.0047\r\n        },\r\n        {\r\n          \"time\": \"2025-02-22T00:00:00\",\r\n          \"value\": 0.004\r\n        },\r\n        {\r\n          \"time\": \"2025-02-23T00:00:00\",\r\n          \"value\": 0.0033\r\n        },\r\n        {\r\n          \"time\": \"2025-02-24T00:00:00\",\r\n          \"value\": 0.0027\r\n        },\r\n        {\r\n          \"time\": \"2025-02-25T00:00:00\",\r\n          \"value\": 0.002\r\n        },\r\n        {\r\n          \"time\": \"2025-02-26T00:00:00\",\r\n          \"value\": 0.0013\r\n        },\r\n        {\r\n          \"time\": \"2025-02-27T00:00:00\",\r\n          \"value\": 0.0007\r\n        },\r\n        {\r\n          \"time\": \"2025-02-28T00:00:00\",\r\n          \"value\": 0\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dynamic_Discount3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"INV001_DAY01\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2025-01-29T00:00:00\",\r\n      \"statusDate\": \"2025-01-29T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-01-30T00:00:00\",\r\n      \"notionalPrincipal\": 980.00,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"INV001_DAY15\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2025-01-29T00:00:00\",\r\n      \"statusDate\": \"2025-01-29T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-13T00:00:00\",\r\n      \"notionalPrincipal\": 989.66,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"INV001_DAY30\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2025-01-29T00:00:00\",\r\n      \"statusDate\": \"2025-01-29T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-28T00:00:00\",\r\n      \"notionalPrincipal\": 1000.00,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"INV002_DAY01\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2025-01-29T00:00:00\",\r\n      \"statusDate\": \"2025-01-29T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-01-30T00:00:00\",\r\n      \"notionalPrincipal\": 9800.00,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"INV002_DAY15\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2025-01-29T00:00:00\",\r\n      \"statusDate\": \"2025-01-29T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-13T00:00:00\",\r\n      \"notionalPrincipal\": 9896.55,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"INV002_DAY30\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2025-01-29T00:00:00\",\r\n      \"statusDate\": \"2025-01-29T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-28T00:00:00\",\r\n      \"notionalPrincipal\": 10000.00,\r\n      \"nominalInterestRate\": 0,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dynamic_Discount4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"Invoice1\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2025-01-28T00:00:00\",\r\n      \"contractDealDate\": \"2025-01-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-28T00:00:00\",\r\n      \"notionalPrincipal\": 1000,\r\n      \"nominalInterestRate\": -0.02,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\",\r\n      \"counterpartyID\": \"Supplier01\",\r\n      \"creatorID\": \"Buyer01\",\r\n      \"cycleOfRateReset\": \"P1DL1\",\r\n      \"cycleAnchorDateOfRateReset\": \"2025-01-29T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"DISCOUNT_RATE_INDEX\",\r\n      \"rateMultiplier\": 1.0,\r\n      \"rateSpread\": 0.0,\r\n      \"fixingDays\": \"P0D\"\r\n    },\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"Invoice2\",\r\n      \"contractRole\": \"RPA\",\r\n      \"statusDate\": \"2025-01-28T00:00:00\",\r\n      \"contractDealDate\": \"2025-01-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-29T00:00:00\",\r\n      \"maturityDate\": \"2025-02-28T00:00:00\",\r\n      \"notionalPrincipal\": 10000,\r\n      \"nominalInterestRate\": -0.02,\r\n      \"dayCountConvention\": \"AA\",\r\n      \"currency\": \"USD\",\r\n      \"counterpartyID\": \"Supplier01\",\r\n      \"creatorID\": \"Buyer01\",\r\n      \"cycleOfRateReset\": \"P1DL1\",\r\n      \"cycleAnchorDateOfRateReset\": \"2025-01-29T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"DISCOUNT_RATE_INDEX\",\r\n      \"rateMultiplier\": 1.0,\r\n      \"rateSpread\": 0.0,\r\n      \"fixingDays\": \"P0D\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"DISCOUNT_RATE_INDEX\",\r\n      \"base\": -0.02,\r\n      \"data\": [\r\n        {\"time\": \"2025-01-29T00:00:00\", \"value\": -0.0200},\r\n        {\"time\": \"2025-01-30T00:00:00\", \"value\": -0.0193},\r\n        {\"time\": \"2025-01-31T00:00:00\", \"value\": -0.0187},\r\n        {\"time\": \"2025-02-01T00:00:00\", \"value\": -0.0180},\r\n        {\"time\": \"2025-02-02T00:00:00\", \"value\": -0.0173},\r\n        {\"time\": \"2025-02-03T00:00:00\", \"value\": -0.0167},\r\n        {\"time\": \"2025-02-04T00:00:00\", \"value\": -0.0160},\r\n        {\"time\": \"2025-02-05T00:00:00\", \"value\": -0.0153},\r\n        {\"time\": \"2025-02-06T00:00:00\", \"value\": -0.0147},\r\n        {\"time\": \"2025-02-07T00:00:00\", \"value\": -0.0140},\r\n        {\"time\": \"2025-02-08T00:00:00\", \"value\": -0.0133},\r\n        {\"time\": \"2025-02-09T00:00:00\", \"value\": -0.0127},\r\n        {\"time\": \"2025-02-10T00:00:00\", \"value\": -0.0120},\r\n        {\"time\": \"2025-02-11T00:00:00\", \"value\": -0.0113},\r\n        {\"time\": \"2025-02-12T00:00:00\", \"value\": -0.0107},\r\n        {\"time\": \"2025-02-13T00:00:00\", \"value\": -0.0100},\r\n        {\"time\": \"2025-02-14T00:00:00\", \"value\": -0.0093},\r\n        {\"time\": \"2025-02-15T00:00:00\", \"value\": -0.0087},\r\n        {\"time\": \"2025-02-16T00:00:00\", \"value\": -0.0080},\r\n        {\"time\": \"2025-02-17T00:00:00\", \"value\": -0.0073},\r\n        {\"time\": \"2025-02-18T00:00:00\", \"value\": -0.0067},\r\n        {\"time\": \"2025-02-19T00:00:00\", \"value\": -0.0060},\r\n        {\"time\": \"2025-02-20T00:00:00\", \"value\": -0.0053},\r\n        {\"time\": \"2025-02-21T00:00:00\", \"value\": -0.0047},\r\n        {\"time\": \"2025-02-22T00:00:00\", \"value\": -0.0040},\r\n        {\"time\": \"2025-02-23T00:00:00\", \"value\": -0.0033},\r\n        {\"time\": \"2025-02-24T00:00:00\", \"value\": -0.0027},\r\n        {\"time\": \"2025-02-25T00:00:00\", \"value\": -0.0020},\r\n        {\"time\": \"2025-02-26T00:00:00\", \"value\": -0.0013},\r\n        {\"time\": \"2025-02-27T00:00:00\", \"value\": -0.0007},\r\n        {\"time\": \"2025-02-28T00:00:00\", \"value\": 0.0000}\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SWPPV1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"SWPPV\",\r\n      \"contractID\": \"swppv-corporate-hedge-001\",\r\n      \"statusDate\": \"2024-12-31T00:00:00\",\r\n      \"contractRole\": \"PFL\",\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2024-12-28T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-01T00:00:00\",\r\n      \"maturityDate\": \"2030-01-01T00:00:00\",\r\n      \"notionalPrincipal\": 50000000,\r\n      \"cycleAnchorDateOfInterestPayment\": \"2025-04-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P3ML1\",\r\n      \"nominalInterestRate\": 0.045,\r\n      \"nominalInterestRate2\": 0.04,\r\n      \"dayCountConvention\": \"A360\",\r\n      \"cycleAnchorDateOfRateReset\": \"2025-01-01T00:00:00\",\r\n      \"cycleOfRateReset\": \"P3ML1\",\r\n      \"rateSpread\": 0.0,\r\n      \"marketObjectCodeOfRateReset\": \"USD_SOFR\",\r\n      \"fixingPeriod\": \"P0D\",\r\n      \"deliverySettlement\": \"S\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"USD_SOFR\",\r\n      \"base\": 0.04,\r\n      \"data\": [\r\n        {\"time\": \"2025-01-01T00:00:00\", \"value\": 0.04},\r\n        {\"time\": \"2025-04-01T00:00:00\", \"value\": 0.045},\r\n        {\"time\": \"2025-07-01T00:00:00\", \"value\": 0.05},\r\n        {\"time\": \"2025-10-01T00:00:00\", \"value\": 0.055},\r\n        {\"time\": \"2026-01-01T00:00:00\", \"value\": 0.05}\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "options1-with-risk-w",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractDealDate\": \"2020-01-01T00:00:00\",\r\n      \"contractID\": \"option01\",\r\n      \"contractRole\": \"BUY\",\r\n      \"contractStructure\": [\r\n        {\r\n          \"object\": {\r\n            \"marketObjectCode\": \"AAPL\"\r\n          },\r\n          \"referenceType\": \"MOC\",\r\n          \"referenceRole\": \"UDL\"\r\n        }\r\n      ],\r\n      \"counterpartyID\": \"Counterparty-01\",\r\n      \"creatorID\": \"Creator-01\",\r\n      \"currency\": \"USD\",\r\n      \"maturityDate\": \"2020-03-30T00:00:00\",\r\n      \"optionExerciseEndDate\": \"2020-03-30T00:00:00\",\r\n      \"optionExerciseType\": \"E\",\r\n      \"optionStrike1\": \"80\",\r\n      \"optionType\": \"C\",\r\n      \"priceAtPurchaseDate\": \"10\",\r\n      \"purchaseDate\": \"2020-01-02T00:00:00\",\r\n      \"statusDate\": \"2020-01-01T00:00:00\",\r\n      \"calendar\": \"NC\",\r\n      \"deliverySettlement\": \"S\",\r\n      \"settlementPeriod\": \"P0D\",\r\n      \"contractType\": \"OPTNS\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"AAPL\",\r\n      \"base\": 1,\r\n      \"data\": [\r\n        {\r\n          \"time\": \"2020-03-30T00:00:00\",\r\n          \"value\": 63.7\r\n        },\r\n        {\r\n          \"time\": \"2020-06-30T00:00:00\",\r\n          \"value\": 91.2\r\n        },\r\n        {\r\n          \"time\": \"2020-09-30T00:00:00\",\r\n          \"value\": 115.81\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "options-CNT-test3-w",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"underlying_bond_001\",\r\n      \"contractRole\": \"RPA\",\r\n      \"counterpartyID\": \"Counterparty-01\",\r\n      \"creatorID\": \"Creator-01\",\r\n      \"currency\": \"USD\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"initialExchangeDate\": \"2020-01-01T00:00:00\",\r\n      \"maturityDate\": \"2025-01-01T00:00:00\",\r\n      \"nominalInterestRate\": \"0.05\",\r\n      \"notionalPrincipal\": \"10000\",\r\n      \"contractDealDate\": \"2019-12-15T00:00:00\",\r\n      \"statusDate\": \"2020-01-01T00:00:00\"\r\n    },\r\n    {\r\n      \"contractDealDate\": \"2020-01-01T00:00:00\",\r\n      \"contractID\": \"option_on_bond_001\",\r\n      \"contractRole\": \"BUY\",\r\n      \"contractStructure\": [\r\n        {\r\n          \"object\": {\r\n            \"marketObjectCode\": \"BOND_PRICE\"\r\n          },\r\n          \"referenceType\": \"MOC\",\r\n          \"referenceRole\": \"UDL\"\r\n        }\r\n      ],\r\n      \"counterpartyID\": \"Counterparty-01\",\r\n      \"creatorID\": \"Creator-01\",\r\n      \"currency\": \"USD\",\r\n      \"maturityDate\": \"2020-06-30T00:00:00\",\r\n      \"optionExerciseEndDate\": \"2020-06-30T00:00:00\",\r\n      \"optionExerciseType\": \"E\",\r\n      \"optionStrike1\": \"9500\",\r\n      \"optionType\": \"C\",\r\n      \"priceAtPurchaseDate\": \"100\",\r\n      \"purchaseDate\": \"2020-01-02T00:00:00\",\r\n      \"statusDate\": \"2020-01-01T00:00:00\",\r\n      \"calendar\": \"NC\",\r\n      \"deliverySettlement\": \"S\",\r\n      \"settlementPeriod\": \"P0D\",\r\n      \"contractType\": \"OPTNS\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"BOND_PRICE\",\r\n      \"base\": 1,\r\n      \"data\": [\r\n        {\r\n          \"time\": \"2020-01-01T00:00:00\",\r\n          \"value\": 10000\r\n        },\r\n        {\r\n          \"time\": \"2020-06-30T00:00:00\",\r\n          \"value\": 10200\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tariff2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"calendar\": \"WEEKDAY\",\r\n      \"businessDayConvention\": \"SCF\",\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"EXPORTER_LOAN_TARIFF_STRESS\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2026-02-01T00:00:00\",\r\n      \"statusDate\": \"2026-02-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2026-02-01T00:00:00\",\r\n      \"maturityDate\": \"2029-02-01T00:00:00\",\r\n      \"notionalPrincipal\": 1000000,\r\n      \"nominalInterestRate\": 0.0675,\r\n      \"currency\": \"USD\",\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"premiumDiscountAtIED\": 0,\r\n      \"cycleOfInterestPayment\": \"P3ML1\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-05-01T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"USD_SOFR_STRESS\",\r\n      \"cycleOfRateReset\": \"P3ML1\",\r\n      \"cycleAnchorDateOfRateReset\": \"2026-05-01T00:00:00\",\r\n      \"rateSpread\": 0.025\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"USD_SOFR_STRESS\",\r\n      \"base\": 1.0,\r\n      \"data\": [\r\n        {\"time\": \"2026-02-01T00:00:00\", \"value\": 0.0425},\r\n        {\"time\": \"2026-05-01T00:00:00\", \"value\": 0.0475},\r\n        {\"time\": \"2026-08-01T00:00:00\", \"value\": 0.0525},\r\n        {\"time\": \"2026-11-01T00:00:00\", \"value\": 0.0550},\r\n        {\"time\": \"2027-02-01T00:00:00\", \"value\": 0.0550},\r\n        {\"time\": \"2027-05-01T00:00:00\", \"value\": 0.0525},\r\n        {\"time\": \"2027-08-01T00:00:00\", \"value\": 0.0500},\r\n        {\"time\": \"2027-11-01T00:00:00\", \"value\": 0.0480},\r\n        {\"time\": \"2028-02-01T00:00:00\", \"value\": 0.0460},\r\n        {\"time\": \"2028-05-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2028-08-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2028-11-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2029-02-01T00:00:00\", \"value\": 0.0450}\r\n      ]\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SAC-1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"ETH_LOAN_001\",\r\n      \"statusDate\": \"2025-02-03T00:00:00\",\r\n      \"contractDealDate\": \"2025-02-03T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"creatorID\": \"Lender-01\",\r\n      \"counterpartyID\": \"Borrower-01\",\r\n      \"currency\": \"USD\",\r\n      \"notionalPrincipal\": 10000,\r\n      \"initialExchangeDate\": \"2025-02-03T00:00:00\",\r\n      \"maturityDate\": \"2026-02-03T00:00:00\",\r\n      \"nominalInterestRate\": 0.08,\r\n      \"dayCountConvention\": \"A365\",\r\n      \"endOfMonthConvention\": \"SD\",\r\n      \"cycleOfInterestPayment\": \"P1DL0\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2025-02-04T00:00:00\",\r\n      \"premiumDiscountAtIED\": 0,\r\n      \"rateMultiplier\": 1.0\r\n    },\r\n    {\r\n      \"contractType\": \"COM\",\r\n      \"contractID\": \"ETH_COLLATERAL_001\",\r\n      \"statusDate\": \"2025-02-03T00:00:00\",\r\n      \"contractDealDate\": \"2025-02-03T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"creatorID\": \"Borrower-01\",\r\n      \"counterpartyID\": \"Lender-01\",\r\n      \"currency\": \"USD\",\r\n      \"purchaseDate\": \"2025-02-03T00:00:00\",\r\n      \"priceAtPurchaseDate\": 2500,\r\n      \"quantity\": 6,\r\n      \"unit\": \"ETH\",\r\n      \"marketObjectCode\": \"ETHUSD\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"ETHUSD\",\r\n      \"base\": 1.0,\r\n      \"data\": [\r\n        {\"time\": \"2025-02-03T00:00:00\", \"value\": 2500},\r\n        {\"time\": \"2025-02-04T00:00:00\", \"value\": 2475},\r\n        {\"time\": \"2025-02-05T00:00:00\", \"value\": 2450},\r\n        {\"time\": \"2025-02-06T00:00:00\", \"value\": 2380},\r\n        {\"time\": \"2025-02-07T00:00:00\", \"value\": 2320},\r\n        {\"time\": \"2025-02-08T00:00:00\", \"value\": 2280},\r\n        {\"time\": \"2025-02-09T00:00:00\", \"value\": 2200},\r\n        {\"time\": \"2025-02-10T00:00:00\", \"value\": 2150},\r\n        {\"time\": \"2025-02-11T00:00:00\", \"value\": 2050},\r\n        {\"time\": \"2025-02-12T00:00:00\", \"value\": 1980},\r\n        {\"time\": \"2025-02-13T00:00:00\", \"value\": 1920},\r\n        {\"time\": \"2025-02-14T00:00:00\", \"value\": 1850}\r\n      ]\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SAC-2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"ETH_LOAN_VARIABLE_001\",\r\n      \"statusDate\": \"2025-02-03T00:00:00\",\r\n      \"contractDealDate\": \"2025-02-03T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-02-03T00:00:00\",\r\n      \"maturityDate\": \"2025-03-03T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"creatorID\": \"Lender-01\",\r\n      \"counterpartyID\": \"Borrower-01\",\r\n      \"currency\": \"USD\",\r\n      \"notionalPrincipal\": 10000,\r\n      \"nominalInterestRate\": 0.08,\r\n      \"dayCountConvention\": \"A365\",\r\n      \"endOfMonthConvention\": \"SD\",\r\n      \"cycleOfInterestPayment\": \"P1DL0\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2025-02-04T00:00:00\",\r\n      \"cycleOfRateReset\": \"P1DL0\",\r\n      \"cycleAnchorDateOfRateReset\": \"2025-02-04T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"ETHUSD_INDEX\",\r\n      \"rateSpread\": 0.05,\r\n      \"rateMultiplier\": 0.00001\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"ETHUSD_INDEX\",\r\n      \"base\": 1.0,\r\n      \"data\": [\r\n        {\"time\": \"2025-02-03T00:00:00\", \"value\": 2500},\r\n        {\"time\": \"2025-02-04T00:00:00\", \"value\": 2475},\r\n        {\"time\": \"2025-02-05T00:00:00\", \"value\": 2450},\r\n        {\"time\": \"2025-02-06T00:00:00\", \"value\": 2380},\r\n        {\"time\": \"2025-02-07T00:00:00\", \"value\": 2320},\r\n        {\"time\": \"2025-02-08T00:00:00\", \"value\": 2280},\r\n        {\"time\": \"2025-02-09T00:00:00\", \"value\": 2200},\r\n        {\"time\": \"2025-02-10T00:00:00\", \"value\": 2150},\r\n        {\"time\": \"2025-02-11T00:00:00\", \"value\": 2050},\r\n        {\"time\": \"2025-02-12T00:00:00\", \"value\": 1980},\r\n        {\"time\": \"2025-02-13T00:00:00\", \"value\": 1920},\r\n        {\"time\": \"2025-02-14T00:00:00\", \"value\": 1850},\r\n        {\"time\": \"2025-02-15T00:00:00\", \"value\": 1800},\r\n        {\"time\": \"2025-02-16T00:00:00\", \"value\": 1750},\r\n        {\"time\": \"2025-02-17T00:00:00\", \"value\": 1700},\r\n        {\"time\": \"2025-02-18T00:00:00\", \"value\": 1680},\r\n        {\"time\": \"2025-02-19T00:00:00\", \"value\": 1650},\r\n        {\"time\": \"2025-02-20T00:00:00\", \"value\": 1620},\r\n        {\"time\": \"2025-02-21T00:00:00\", \"value\": 1600},\r\n        {\"time\": \"2025-02-22T00:00:00\", \"value\": 1580},\r\n        {\"time\": \"2025-02-23T00:00:00\", \"value\": 1560},\r\n        {\"time\": \"2025-02-24T00:00:00\", \"value\": 1550},\r\n        {\"time\": \"2025-02-25T00:00:00\", \"value\": 1540},\r\n        {\"time\": \"2025-02-26T00:00:00\", \"value\": 1530},\r\n        {\"time\": \"2025-02-27T00:00:00\", \"value\": 1520},\r\n        {\"time\": \"2025-02-28T00:00:00\", \"value\": 1510},\r\n        {\"time\": \"2025-03-01T00:00:00\", \"value\": 1500},\r\n        {\"time\": \"2025-03-02T00:00:00\", \"value\": 1490},\r\n        {\"time\": \"2025-03-03T00:00:00\", \"value\": 1480}\r\n      ]\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SAC-3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"ETH_LOAN_FIXED_001\",\r\n      \"statusDate\": \"2025-02-03T00:00:00\",\r\n      \"contractDealDate\": \"2025-02-03T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-02-03T00:00:00\",\r\n      \"maturityDate\": \"2025-03-03T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"creatorID\": \"Lender-01\",\r\n      \"counterpartyID\": \"Borrower-01\",\r\n      \"currency\": \"USD\",\r\n      \"notionalPrincipal\": 10000,\r\n      \"nominalInterestRate\": 0.08,\r\n      \"dayCountConvention\": \"A365\",\r\n      \"endOfMonthConvention\": \"SD\",\r\n      \"cycleOfInterestPayment\": \"P1DL0\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2025-02-04T00:00:00\"\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SAC-4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"STK\",\r\n      \"contractID\": \"ETH_TOKEN_001\",\r\n      \"statusDate\": \"2025-02-03T00:00:00\",\r\n      \"contractDealDate\": \"2025-02-03T00:00:00\",\r\n      \"contractRole\": \"RPA\",\r\n      \"creatorID\": \"Holder-01\",\r\n      \"counterpartyID\": \"Issuer-01\",\r\n      \"currency\": \"USD\",\r\n      \"purchaseDate\": \"2025-02-03T00:00:00\",\r\n      \"priceAtPurchaseDate\": 2500,\r\n      \"notionalPrincipal\": 15000,\r\n      \"cycleOfDividend\": \"P7DL0\",\r\n      \"cycleAnchorDateOfDividend\": \"2025-02-10T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"ETHUSD\",\r\n      \"terminationDate\": \"2025-03-03T00:00:00\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"ETHUSD\",\r\n      \"base\": 1.0,\r\n      \"data\": [\r\n        {\"time\": \"2025-02-03T00:00:00\", \"value\": 2500},\r\n        {\"time\": \"2025-02-10T00:00:00\", \"value\": 2300},\r\n        {\"time\": \"2025-02-17T00:00:00\", \"value\": 2100},\r\n        {\"time\": \"2025-02-24T00:00:00\", \"value\": 1900},\r\n        {\"time\": \"2025-03-03T00:00:00\", \"value\": 1800}\r\n      ]\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tariff1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"calendar\": \"WEEKDAY\",\r\n      \"businessDayConvention\": \"SCF\",\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"EXPORTER_LOAN_BASELINE\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2026-02-01T00:00:00\",\r\n      \"statusDate\": \"2026-02-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2026-02-01T00:00:00\",\r\n      \"maturityDate\": \"2029-02-01T00:00:00\",\r\n      \"notionalPrincipal\": 1000000,\r\n      \"nominalInterestRate\": 0.0625,\r\n      \"currency\": \"USD\",\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"premiumDiscountAtIED\": 0,\r\n      \"cycleOfInterestPayment\": \"P3ML1\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-05-01T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"USD_SOFR\",\r\n      \"cycleOfRateReset\": \"P3ML1\",\r\n      \"cycleAnchorDateOfRateReset\": \"2026-05-01T00:00:00\",\r\n      \"rateSpread\": 0.02\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"USD_SOFR\",\r\n      \"base\": 1.0,\r\n      \"data\": [\r\n        {\"time\": \"2026-02-01T00:00:00\", \"value\": 0.0425},\r\n        {\"time\": \"2026-05-01T00:00:00\", \"value\": 0.0420},\r\n        {\"time\": \"2026-08-01T00:00:00\", \"value\": 0.0400},\r\n        {\"time\": \"2026-11-01T00:00:00\", \"value\": 0.0380},\r\n        {\"time\": \"2027-02-01T00:00:00\", \"value\": 0.0360},\r\n        {\"time\": \"2027-05-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2027-08-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2027-11-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2028-02-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2028-05-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2028-08-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2028-11-01T00:00:00\", \"value\": 0.0350},\r\n        {\"time\": \"2029-02-01T00:00:00\", \"value\": 0.0350}\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tariff3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"SWPPV\",\r\n      \"contractID\": \"EXPORTER_IRS_HEDGE\",\r\n      \"statusDate\": \"2026-02-01T00:00:00\",\r\n      \"contractRole\": \"RFL\",\r\n      \"currency\": \"USD\",\r\n      \"contractDealDate\": \"2026-02-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2026-02-01T00:00:00\",\r\n      \"maturityDate\": \"2029-02-01T00:00:00\",\r\n      \"notionalPrincipal\": 700000,\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-05-01T00:00:00\",\r\n      \"cycleOfInterestPayment\": \"P3ML1\",\r\n      \"nominalInterestRate\": 0.042,\r\n      \"nominalInterestRate2\": 0.0425,\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"cycleAnchorDateOfRateReset\": \"2026-02-01T00:00:00\",\r\n      \"cycleOfRateReset\": \"P3ML1\",\r\n      \"rateSpread\": 0.0,\r\n      \"marketObjectCodeOfRateReset\": \"USD_SOFR_STRESS\",\r\n      \"fixingPeriod\": \"P0D\",\r\n      \"deliverySettlement\": \"S\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"USD_SOFR_STRESS\",\r\n      \"base\": 0.0425,\r\n      \"data\": [\r\n        {\"time\": \"2026-02-01T00:00:00\", \"value\": 0.0425},\r\n        {\"time\": \"2026-05-01T00:00:00\", \"value\": 0.0475},\r\n        {\"time\": \"2026-08-01T00:00:00\", \"value\": 0.0525},\r\n        {\"time\": \"2026-11-01T00:00:00\", \"value\": 0.0550},\r\n        {\"time\": \"2027-02-01T00:00:00\", \"value\": 0.0550},\r\n        {\"time\": \"2027-05-01T00:00:00\", \"value\": 0.0525},\r\n        {\"time\": \"2027-08-01T00:00:00\", \"value\": 0.0500},\r\n        {\"time\": \"2027-11-01T00:00:00\", \"value\": 0.0480},\r\n        {\"time\": \"2028-02-01T00:00:00\", \"value\": 0.0460},\r\n        {\"time\": \"2028-05-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2028-08-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2028-11-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2029-02-01T00:00:00\", \"value\": 0.0450}\r\n      ]\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tariff4",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"EXPORTER_LOAN\",\r\n      \"contractRole\": \"RPA\",\r\n      \"contractDealDate\": \"2026-02-01T00:00:00\",\r\n      \"statusDate\": \"2026-02-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2026-02-01T00:00:00\",\r\n      \"maturityDate\": \"2029-02-01T00:00:00\",\r\n      \"notionalPrincipal\": 1000000,\r\n      \"nominalInterestRate\": 0.0675,\r\n      \"currency\": \"USD\",\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"cycleOfInterestPayment\": \"P3ML1\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-05-01T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"USD_SOFR\",\r\n      \"cycleOfRateReset\": \"P3ML1\",\r\n      \"cycleAnchorDateOfRateReset\": \"2026-05-01T00:00:00\",\r\n      \"rateSpread\": 0.025\r\n    },\r\n    {\r\n      \"contractType\": \"SWPPV\",\r\n      \"contractID\": \"EXPORTER_SWAP_HEDGE\",\r\n      \"contractRole\": \"RFL\",\r\n      \"contractDealDate\": \"2026-02-01T00:00:00\",\r\n      \"statusDate\": \"2026-02-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2026-02-01T00:00:00\",\r\n      \"maturityDate\": \"2029-02-01T00:00:00\",\r\n      \"notionalPrincipal\": 700000,\r\n      \"nominalInterestRate\": 0.042,\r\n      \"nominalInterestRate2\": 0.0425,\r\n      \"currency\": \"USD\",\r\n      \"dayCountConvention\": \"30E360\",\r\n      \"cycleOfInterestPayment\": \"P3ML1\",\r\n      \"cycleAnchorDateOfInterestPayment\": \"2026-05-01T00:00:00\",\r\n      \"marketObjectCodeOfRateReset\": \"USD_SOFR\",\r\n      \"cycleOfRateReset\": \"P3ML1\",\r\n      \"cycleAnchorDateOfRateReset\": \"2026-02-01T00:00:00\",\r\n      \"rateSpread\": 0.0,\r\n      \"fixingPeriod\": \"P0D\",\r\n      \"deliverySettlement\": \"S\"\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"USD_SOFR\",\r\n      \"base\": 0.0425,\r\n      \"data\": [\r\n        {\"time\": \"2026-02-01T00:00:00\", \"value\": 0.0425},\r\n        {\"time\": \"2026-05-01T00:00:00\", \"value\": 0.0475},\r\n        {\"time\": \"2026-08-01T00:00:00\", \"value\": 0.0525},\r\n        {\"time\": \"2026-11-01T00:00:00\", \"value\": 0.0550},\r\n        {\"time\": \"2027-02-01T00:00:00\", \"value\": 0.0550},\r\n        {\"time\": \"2027-05-01T00:00:00\", \"value\": 0.0525},\r\n        {\"time\": \"2027-08-01T00:00:00\", \"value\": 0.0500},\r\n        {\"time\": \"2027-11-01T00:00:00\", \"value\": 0.0480},\r\n        {\"time\": \"2028-02-01T00:00:00\", \"value\": 0.0460},\r\n        {\"time\": \"2028-05-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2028-08-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2028-11-01T00:00:00\", \"value\": 0.0450},\r\n        {\"time\": \"2029-02-01T00:00:00\", \"value\": 0.0450}\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invoice_factoring",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractType\": \"PAM\",\r\n      \"contractID\": \"invoice-dynamic\",\r\n      \"contractRole\": \"RPA\",\r\n      \"calendar\": \"WEEKDAY\",\r\n      \"businessDayConvention\": \"SCF\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"statusDate\": \"2025-01-01T00:00:00\",\r\n      \"contractDealDate\": \"2025-01-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-02T00:00:00\",\r\n      \"maturityDate\": \"2025-01-20T00:00:00\",\r\n      \"premiumDiscountAtIED\": -800.00,\r\n      \"notionalPrincipal\": 100000,\r\n      \"currency\": \"USD\",\r\n      \"nominalInterestRate\": 0.0\r\n    }\r\n  ],\r\n  \"riskFactors\": [\r\n    {\r\n      \"marketObjectCode\": \"DISCOUNT_PENALTY_REFERENCE\",\r\n      \"base\": 1.0,\r\n      \"data\": [\r\n        {\r\n          \"time\": \"2025-01-02T00:00:00\",\r\n          \"value\": 0.02\r\n        },\r\n        {\r\n          \"time\": \"2025-01-03T00:00:00\",\r\n          \"value\": 0.019333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-04T00:00:00\",\r\n          \"value\": 0.018667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-05T00:00:00\",\r\n          \"value\": 0.018\r\n        },\r\n        {\r\n          \"time\": \"2025-01-06T00:00:00\",\r\n          \"value\": 0.017333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-07T00:00:00\",\r\n          \"value\": 0.016667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-08T00:00:00\",\r\n          \"value\": 0.016\r\n        },\r\n        {\r\n          \"time\": \"2025-01-09T00:00:00\",\r\n          \"value\": 0.015333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-10T00:00:00\",\r\n          \"value\": 0.014667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-11T00:00:00\",\r\n          \"value\": 0.014\r\n        },\r\n        {\r\n          \"time\": \"2025-01-12T00:00:00\",\r\n          \"value\": 0.013333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-13T00:00:00\",\r\n          \"value\": 0.012667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-14T00:00:00\",\r\n          \"value\": 0.012\r\n        },\r\n        {\r\n          \"time\": \"2025-01-15T00:00:00\",\r\n          \"value\": 0.011333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-16T00:00:00\",\r\n          \"value\": 0.010667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-17T00:00:00\",\r\n          \"value\": 0.01\r\n        },\r\n        {\r\n          \"time\": \"2025-01-18T00:00:00\",\r\n          \"value\": 0.009333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-19T00:00:00\",\r\n          \"value\": 0.008667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-20T00:00:00\",\r\n          \"value\": 0.008\r\n        },\r\n        {\r\n          \"time\": \"2025-01-21T00:00:00\",\r\n          \"value\": 0.007333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-22T00:00:00\",\r\n          \"value\": 0.006667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-23T00:00:00\",\r\n          \"value\": 0.006\r\n        },\r\n        {\r\n          \"time\": \"2025-01-24T00:00:00\",\r\n          \"value\": 0.005333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-25T00:00:00\",\r\n          \"value\": 0.004667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-26T00:00:00\",\r\n          \"value\": 0.004\r\n        },\r\n        {\r\n          \"time\": \"2025-01-27T00:00:00\",\r\n          \"value\": 0.003333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-28T00:00:00\",\r\n          \"value\": 0.002667\r\n        },\r\n        {\r\n          \"time\": \"2025-01-29T00:00:00\",\r\n          \"value\": 0.002\r\n        },\r\n        {\r\n          \"time\": \"2025-01-30T00:00:00\",\r\n          \"value\": 0.001333\r\n        },\r\n        {\r\n          \"time\": \"2025-01-31T00:00:00\",\r\n          \"value\": 0.000667\r\n        },\r\n        {\r\n          \"time\": \"2025-02-01T00:00:00\",\r\n          \"value\": 0.0\r\n        },\r\n        {\r\n          \"time\": \"2025-02-02T00:00:00\",\r\n          \"value\": -0.001\r\n        },\r\n        {\r\n          \"time\": \"2025-02-03T00:00:00\",\r\n          \"value\": -0.002\r\n        },\r\n        {\r\n          \"time\": \"2025-02-04T00:00:00\",\r\n          \"value\": -0.003\r\n        },\r\n        {\r\n          \"time\": \"2025-02-05T00:00:00\",\r\n          \"value\": -0.004\r\n        },\r\n        {\r\n          \"time\": \"2025-02-06T00:00:00\",\r\n          \"value\": -0.005\r\n        },\r\n        {\r\n          \"time\": \"2025-02-07T00:00:00\",\r\n          \"value\": -0.006\r\n        },\r\n        {\r\n          \"time\": \"2025-02-08T00:00:00\",\r\n          \"value\": -0.007\r\n        },\r\n        {\r\n          \"time\": \"2025-02-09T00:00:00\",\r\n          \"value\": -0.008\r\n        },\r\n        {\r\n          \"time\": \"2025-02-10T00:00:00\",\r\n          \"value\": -0.009\r\n        },\r\n        {\r\n          \"time\": \"2025-02-11T00:00:00\",\r\n          \"value\": -0.01\r\n        },\r\n        {\r\n          \"time\": \"2025-02-12T00:00:00\",\r\n          \"value\": -0.011\r\n        },\r\n        {\r\n          \"time\": \"2025-02-13T00:00:00\",\r\n          \"value\": -0.012\r\n        },\r\n        {\r\n          \"time\": \"2025-02-14T00:00:00\",\r\n          \"value\": -0.013\r\n        },\r\n        {\r\n          \"time\": \"2025-02-15T00:00:00\",\r\n          \"value\": -0.014\r\n        },\r\n        {\r\n          \"time\": \"2025-02-16T00:00:00\",\r\n          \"value\": -0.015\r\n        },\r\n        {\r\n          \"time\": \"2025-02-17T00:00:00\",\r\n          \"value\": -0.016\r\n        },\r\n        {\r\n          \"time\": \"2025-02-18T00:00:00\",\r\n          \"value\": -0.017\r\n        },\r\n        {\r\n          \"time\": \"2025-02-19T00:00:00\",\r\n          \"value\": -0.018\r\n        },\r\n        {\r\n          \"time\": \"2025-02-20T00:00:00\",\r\n          \"value\": -0.019\r\n        },\r\n        {\r\n          \"time\": \"2025-02-21T00:00:00\",\r\n          \"value\": -0.02\r\n        },\r\n        {\r\n          \"time\": \"2025-02-22T00:00:00\",\r\n          \"value\": -0.021\r\n        },\r\n        {\r\n          \"time\": \"2025-02-23T00:00:00\",\r\n          \"value\": -0.022\r\n        },\r\n        {\r\n          \"time\": \"2025-02-24T00:00:00\",\r\n          \"value\": -0.023\r\n        },\r\n        {\r\n          \"time\": \"2025-02-25T00:00:00\",\r\n          \"value\": -0.024\r\n        },\r\n        {\r\n          \"time\": \"2025-02-26T00:00:00\",\r\n          \"value\": -0.025\r\n        },\r\n        {\r\n          \"time\": \"2025-02-27T00:00:00\",\r\n          \"value\": -0.026\r\n        },\r\n        {\r\n          \"time\": \"2025-02-28T00:00:00\",\r\n          \"value\": -0.027\r\n        },\r\n        {\r\n          \"time\": \"2025-03-01T00:00:00\",\r\n          \"value\": -0.028\r\n        },\r\n        {\r\n          \"time\": \"2025-03-02T00:00:00\",\r\n          \"value\": -0.029\r\n        },\r\n        {\r\n          \"time\": \"2025-03-03T00:00:00\",\r\n          \"value\": -0.03\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dynamic_discounting",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contracts\": [\r\n    {\r\n      \"contractID\": \"DD-CORRECTED-2025-01-20\",\r\n      \"contractType\": \"PAM\",\r\n      \"contractRole\": \"RPL\",\r\n      \"calendar\": \"WEEKDAY\",\r\n      \"businessDayConvention\": \"SCF\",\r\n      \"dayCountConvention\": \"A365\",\r\n      \"statusDate\": \"2025-01-01T00:00:00\",\r\n      \"contractDealDate\": \"2025-01-01T00:00:00\",\r\n      \"initialExchangeDate\": \"2025-01-02T00:00:00\",\r\n      \"maturityDate\": \"2025-01-15T00:00:00\",\r\n      \"notionalPrincipal\": 98866.67,\r\n      \"currency\": \"USD\",\r\n      \"nominalInterestRate\": 0.0,\r\n      \"premiumDiscountAtIED\": 1133.33\r\n    }\r\n  ],\r\n  \"riskFactors\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://34.203.247.32:8083/eventsBatch",
+          "protocol": "http",
+          "host": [
+            "34",
+            "203",
+            "247",
+            "32"
+          ],
+          "port": "8083",
+          "path": [
+            "eventsBatch"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
